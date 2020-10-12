@@ -33,3 +33,6 @@ ul,ol,dl,li,menu {list-style: none;}
 
 /*이미지 초기화*/
 img {vertical-align: top; /*이미지 여백 초기화 block 써도 상관없음*/}
+
+/* 폰트 스타일 초기화 */
+em {font-style: normal;}
