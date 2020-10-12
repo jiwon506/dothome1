@@ -1,0 +1,16 @@
+/* 스킵네비게이션 */
+
+/* 레이아웃 */
+#wrap { width: 100%;}
+#header { width: 100%; height: 325px; }
+#contents { width: 100%; height: 800px;}
+#footer { width: 100%; height: 200px;}  
+
+/* 컨테이너 */
+.container { width: 990px; margin: 0 auto; height: inherit; background: rgba(255,255,255,0.3); }
+
+/* 컨텐츠레이아웃 */
+#cont_nav {}
+#cont_tit {}
+#cont_ban {}
+#cont_cont {}
