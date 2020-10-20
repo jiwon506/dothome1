@@ -21,5 +21,19 @@
     </div>
     <!-- script -->
     <script src="jquery.min_1.12.4.js"></script>
+
+     <!-- script 연동 -->
+     <script src="jquery.min_1.12.4.js"></script>
+     <script>
+  
+         // 계층선택자
+         // 하위선택자
+         $(".list li").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"}); //하위선택자
+         $(".list > li").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //자식선택자
+         $(".list5 + li").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //형제선택자
+         $(".list5 ~ li").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //형제들선택자
+ 
+     </script>
+     
 </body>
 </html>
