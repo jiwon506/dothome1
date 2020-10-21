@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="JIWON KIM">
     <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
-    <meta name="keywords"
-        content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
-    <title>JIWON KIM</title>
+    <meta name="keywords" content="jiwonkim, publisher, css3, html, markup, design, jiwon506,jiwoncodepen">
+    <title>MUNGGLEUMMUM</title>
 
     <!-- css -->
     <link href="assets/css/bootstrapTheme.css" rel="stylesheet">
@@ -29,18 +28,18 @@
 
     <!-- Facebook meta tags -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="웹스토리보이" />
-    <meta property="og:url" content="http://richclub8.dothome.co.kr/responsive/html5/index.html" />
-    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
-    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:title" content="MOONGLEUMMUM" />
+    <meta property="og:url" content="http://kjw911108.dothome.co.kr" />
+    <meta property="og:image" content="http://kjw911108.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="뭉글어멈" />
     <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
 
     <!-- twitter meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@webstoryboy" />
-    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:title" content="뭉글어멈" />
     <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
-    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="twitter:image" content="웹과 관련된 정보를 제공합니다." />
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
@@ -59,10 +58,51 @@
         #clock {
             display: block;
         }
+
+        .link1 {
+            background: #fff;
+            left: 50%;
+            transform: translatex(-50%);
+            color: #000;
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 10px 30px !important;
+            height: auto !important;
+            box-sizing: border-box;
+            width: auto !important;
+            font-size: 20px !important;
+            margin-top: 36px !important;
+        }
+
+        .link2 {
+            background: #fff;
+            left: 50%;
+            transform: translatex(-50%);
+            color: #000;
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 10px 30px !important;
+            height: auto !important;
+            box-sizing: border-box;
+            width: auto !important;
+            font-size: 20px !important;
+            margin-top: 86px !important;
+        }
+
+        .disqus {
+            margin-right: 20px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 
 <body>
+    <!--ADDTHIS-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f8fa8010343f78d"></script>
+
     <!-- nav -->
     <div id="top-nav" class="navbar navbar-fixed-top">
         <div class="navbar-inner">
@@ -72,14 +112,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="brand" href="http://webstoryboy.co.kr">JIWON KIM</a>
+                <a class="brand" href="http://kjw911108.dothome.co.kr">JIWON KIM</a>
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
                         <li><a href="https://smartwebuiux.tistory.com/">Tistory</a></li>
-                        <li><a href="https://webzz.tistory.com/">Coding</a></li>
-                        <li><a href="https://wtss.tistory.com/">Tutor</a></li>
-                        <li><a href="https://wess.tistory.com/">Edu</a></li>
-                        <li><a href="https://wsss.tistory.com/">CSS</a></li>
+                        <li><a href="https://codepen.io/jiwoncodepen">Codepen</a></li>
+                        <li><a href="https://github.com/jiwon506/dothome1">Github</a></li>
+                        <li><a href="https://github.com/jiwon506/dothome1">Figma</a></li>
                     </ul>
                 </div>
             </div>
@@ -93,7 +132,7 @@
             <div class="row">
                 <div class="span12" style="text-align:center;">
                     <div class="header_tit">
-                        <a href="http://webstoryboy.co.kr"><img src="assets/img/main2.svg" alt="main"></a>
+                        <a href="http://kimjiwon911108.dothome.co.kr"><img src="assets/img/main2.svg" alt="main"></a>
                         <h1>Professional web publishers</h1>
                     </div>
                     <div class="header_icon">
@@ -137,9 +176,11 @@
                     <ul class="filter option-set" data-filter-group="color">
                         <li><a href="#filter-color-any" data-filter-value="" class="selected">ALL</a></li>
                         <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".class">CLASS</a>
-                        <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".script">SCRIPT</a>
+                        <li class="webstandard"><a href="#filter-color-webstandard"
+                                data-filter-value=".script">SCRIPT</a>
                         <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".site">SITE</a>
-                        <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".design">DESIGN</a>
+                        <li class="webstandard"><a href="#filter-color-webstandard"
+                                data-filter-value=".design">DESIGN</a>
                         </li>
                     </ul>
                 </div>
@@ -194,7 +235,7 @@
 
                     <!-- box -->
                     <section class="color-shape script">
-                        <a href="#" target="_blank">
+                        <a href="https://app.gitbook.com/@kimjiwon911108/s/jquery/" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
                                     <span class="overlay-img-donut">JQUERY</span>
@@ -215,7 +256,8 @@
 
                     <!-- box -->
                     <section class="color-shape class">
-                        <a href="#" target="_blank">
+                        <a href="https://www.figma.com/proto/Wk0VtIb8bKuw6EvFU3FAbK/HTML?node-id=1%3A24&viewport=198%2C158%2C0.11246679723262787&scaling=min-zoom"
+                            target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
                                     <span class="overlay-img-donut">HTML</span>
@@ -236,7 +278,8 @@
 
                     <!-- box -->
                     <section class="color-shape class">
-                        <a href="#" target="_blank">
+                        <a href="https://www.figma.com/proto/AQi3wpkOR7Wz0T1wVXGA3S/css?node-id=1%3A33&viewport=110%2C321%2C0.07255689054727554&scaling=min-zoom"
+                            target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
                                     <span class="overlay-img-donut">CSS</span>
@@ -276,9 +319,9 @@
                     </section>
                     <!-- //box -->
 
-                     <!-- box -->
-                     <section class="color-shape design">
-                        <a href="phothshop/" target="_blank">
+                    <!-- box -->
+                    <section class="color-shape design">
+                        <a href="photoshop/index.html" target="_blank">
                             <div class="image-wrap">
                                 <div class="hover-wrap">
                                     <span class="overlay-img-donut">PHOTOSHOP</span>
@@ -297,9 +340,9 @@
                     </section>
                     <!-- //box -->
 
-                     <!-- box -->
-                     <section class="color-shape design">
-                        <a href="illustrator/" target="_blank">
+                    <!-- box -->
+                    <section class="color-shape design">
+                        <a href="illustrator/index.html" _blank>
                             <div class="image-wrap">
                                 <div class="hover-wrap">
                                     <span class="overlay-img-donut">ILLUSTRATOR</span>
@@ -320,40 +363,162 @@
 
                     <!-- box -->
                     <section class="color-shape site">
-                        <a href="webstandard/" target="_blank">
-                            <div class="image-wrap">
-                                <div class="hover-wrap">
-                                    <span class="overlay-img-donut">WEBSTANDARD</span>
-                                    <span class="overlay-text-thumb-donut">웹표준</span>
-                                    <span class="overlay-text-thumb1-donut">웹표준</span>
-                                    <span class="overlay-text-thumb2-donut">WEBSTANDARD</span>
-                                </div>
-                                <img src="assets/img/svg-bread-egg.svg" alt="portfolio">
-                                <div class="img-text donutImg">
-                                    <h5>WEBSTANDARD</h5>
-                                    <p>웹표준</p>
-                                    <span>WEBSTANDARD</span>
-                                </div>
+                        <div class="image-wrap">
+                            <div class="hover-wrap">
+                                <span class="overlay-img-donut">WEBSTANDARD</span>
+                                <span class="overlay-text-thumb-donut">웹표준</span>
+                                <span class="overlay-text-thumb1-donut link1"><a
+                                        href="https://www.figma.com/proto/hvv5sqe0rRwn0VFq2HOZox/%EC%9B%B9%ED%91%9C%EC%A4%80-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8-%EC%B5%9C%EC%A4%91%EB%94%94%EC%9E%90%EC%9D%B8?node-id=1%3A254&viewport=-826%2C260%2C0.4769448935985565&scaling=min-zoom">FIGMA</a></span>
+                                <span class="overlay-text-thumb2-donut link2"><a
+                                        href="webstandard/index.html">SITE</a></span>
                             </div>
-                        </a>
+                            <img src="assets/img/svg-bread-egg.svg" alt="portfolio">
+                            <div class="img-text donutImg">
+                                <h5>WEBSTANDARD</h5>
+                                <p>웹표준</p>
+                                <span>WEBSTANDARD</span>
+                            </div>
+                        </div>
                     </section>
                     <!-- //box -->
 
                     <!-- box -->
                     <section class="color-shape site">
-                        <a href="responsive/" target="_blank">
+                        <div class="image-wrap">
+                            <div class="hover-wrap">
+                                <span class="overlay-img-donut">RESPONSIVE</span>
+                                <span class="overlay-text-thumb-donut">반응형</span>
+                                <span class="overlay-text-thumb1-donut link1"><a href="#">FIGMA</a></span>
+                                <span class="overlay-text-thumb2-donut link2"><a href="#">SITE</a></span>
+                            </div>
+                            <img src="assets/img/svg-cheeseburger.svg" alt="portfolio">
+                            <div class="img-text donutImg">
+                                <h5>RESPONSIVE</h5>
+                                <p>반응형</p>
+                                <span>RESPONSIVE</span>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- //box -->
+
+                    <!-- 광고박스 들어가야함 box -->
+                    <section class="color-shape site">
+                        <div class="image-wrap">
+                            <div class="hover-wrap">
+                                <span class="overlay-img-donut">RESPONSIVE</span>
+                                <span class="overlay-text-thumb-donut">반응형</span>
+                                <span class="overlay-text-thumb1-donut link1"><a href="#">FIGMA</a></span>
+                                <span class="overlay-text-thumb2-donut link2"><a href="#">SITE</a></span>
+                            </div>
+                            <img src="assets/img/svg-cheeseburger.svg" alt="portfolio">
+                            <div class="img-text donutImg">
+                                <h5>RESPONSIVE</h5>
+                                <p>반응형</p>
+                                <span>RESPONSIVE</span>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- //box -->
+
+                    <!-- ANIMATION box1 -->
+                    <section class="color-shape design">
+                        <a href="animation/cssAnimation.html" _blank>
                             <div class="image-wrap">
                                 <div class="hover-wrap">
-                                    <span class="overlay-img-donut">RESPONSIVE</span>
-                                    <span class="overlay-text-thumb-donut">반응형</span>
-                                    <span class="overlay-text-thumb1-donut">반응형</span>
-                                    <span class="overlay-text-thumb2-donut">RESPONSIVE</span>
+                                    <span class="overlay-img-donut">ANIIMATION</span>
+                                    <span class="overlay-text-thumb-donut">CSS ANIMATION</span>
+                                    <span class="overlay-text-thumb1-donut">CSS</span>
+                                    <span class="overlay-text-thumb2-donut">CSS3</span>
                                 </div>
-                                <img src="assets/img/svg-cheeseburger.svg" alt="portfolio">
+                                <img src="assets/img/svg-lemon.svg" alt="portfolio">
                                 <div class="img-text donutImg">
-                                    <h5>RESPONSIVE</h5>
-                                    <p>반응형</p>
-                                    <span>RESPONSIVE</span>
+                                    <h5>CSS ANIMATION</h5>
+                                    <p>CSS</p>
+                                    <span>CSS3</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+                    <!-- ANIMATION box2 -->
+                    <section class="color-shape design">
+                        <a href="animation/jqueryAnimation.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">ANIIMATION</span>
+                                    <span class="overlay-text-thumb-donut">JQUERY ANIMATION</span>
+                                    <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb2-donut">ANIMATION</span>
+                                </div>
+                                <img src="assets/img/svg-lemon.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>JQUERY ANIMATION</h5>
+                                    <p>SCRIPT</p>
+                                    <span>ANIMATION</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+                    <!-- ANIMATION box3 -->
+                    <section class="color-shape design">
+                        <a href="animation/gsapAnimation.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">ANIIMATION</span>
+                                    <span class="overlay-text-thumb-donut">GSAP ANIMATION</span>
+                                    <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb2-donut">ANIMATION</span>
+                                </div>
+                                <img src="assets/img/svg-lemon.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>GSAP ANIMATION</h5>
+                                    <p>SCRIPT</p>
+                                    <span>ANIMATION</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+                    <!-- ANIMATION box4 -->
+                    <section class="color-shape design">
+                        <a href="animation/svgAnimation.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">ANIIMATION</span>
+                                    <span class="overlay-text-thumb-donut">SVG ANIMATION</span>
+                                    <span class="overlay-text-thumb1-donut">CSS</span>
+                                    <span class="overlay-text-thumb2-donut">ANIMATION</span>
+                                </div>
+                                <img src="assets/img/svg-lemon.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>SVG ANIMATION</h5>
+                                    <p>CSS</p>
+                                    <span>ANIMATION</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+                    <!-- ANIMATION box1 -->
+                    <section class="color-shape design">
+                        <a href="illustrator/index.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">BORDER_RADIUS</span>
+                                    <span class="overlay-text-thumb-donut">SVG BORDER_RADIUS</span>
+                                    <span class="overlay-text-thumb1-donut">CSS</span>
+                                    <span class="overlay-text-thumb2-donut">BORDER_RADIUS</span>
+                                </div>
+                                <img src="assets/img/svg-grapes.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>BORDER_RADIUS</h5>
+                                    <p>CSS3</p>
+                                    <span>ANIMATION</span>
                                 </div>
                             </div>
                         </a>
@@ -361,8 +526,222 @@
                     <!-- //box -->
 
 
+                    <!-- ANIMATION box2 -->
+                    <section class="color-shape design">
+                        <a href="illustrator/index.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">BOX_SHADOW</span>
+                                    <span class="overlay-text-thumb-donut">BOX_SHADOW</span>
+                                    <span class="overlay-text-thumb1-donut">CSS</span>
+                                    <span class="overlay-text-thumb2-donut">BOX_SHADOW</span>
+                                </div>
+                                <img src="assets/img/svg-grapes.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>BOX_SHADOW</h5>
+                                    <p>CSS</p>
+                                    <span>ANIMATION</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+
+                    <!-- ANIMATION box3 -->
+                    <section class="color-shape design">
+                        <a href="illustrator/index.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">TRANSFORM</span>
+                                    <span class="overlay-text-thumb-donut">TRANSFORM</span>
+                                    <span class="overlay-text-thumb1-donut">CSS</span>
+                                    <span class="overlay-text-thumb2-donut">TRANSFORM</span>
+                                </div>
+                                <img src="assets/img/svg-grapes.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>TRANSFORM</h5>
+                                    <p>CSS</p>
+                                    <span>TRANSFORM</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+
+                    <!-- ANIMATION box4 -->
+                    <section class="color-shape design">
+                        <a href="illustrator/index.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">BACKGROUND</span>
+                                    <span class="overlay-text-thumb-donut">BACKGROUND</span>
+                                    <span class="overlay-text-thumb1-donut">CSS</span>
+                                    <span class="overlay-text-thumb2-donut">BACKGROUND</span>
+                                </div>
+                                <img src="assets/img/svg-grapes.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>BACKGROUND</h5>
+                                    <p>CSS</p>
+                                    <span>BACKGROUND</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+                    <!-- 광고박스 들어가야함 box -->
+                    <section class="color-shape site">
+                        <div class="image-wrap">
+                            <div class="hover-wrap">
+                                <span class="overlay-img-donut">RESPONSIVE</span>
+                                <span class="overlay-text-thumb-donut">반응형</span>
+                                <span class="overlay-text-thumb1-donut link1"><a href="#">FIGMA</a></span>
+                                <span class="overlay-text-thumb2-donut link2"><a href="#">SITE</a></span>
+                            </div>
+                            <img src="assets/img/svg-cheeseburger.svg" alt="portfolio">
+                            <div class="img-text donutImg">
+                                <h5>RESPONSIVE</h5>
+                                <p>반응형</p>
+                                <span>RESPONSIVE</span>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- //box -->
+
+                     <!-- ANIMATION box1 -->
+                     <section class="color-shape design">
+                        <a href="illustrator/index.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">MENU_EFFECT</span>
+                                    <span class="overlay-text-thumb-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                                </div>
+                                <img src="assets/img/svg-lemon.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>MENU_EFFECT</h5>
+                                    <p>SCRIPT</p>
+                                    <span>EFFECT</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+                     <!-- ANIMATION box2 -->
+                     <section class="color-shape design">
+                        <a href="illustrator/index.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">MOUSEFFECT</span>
+                                    <span class="overlay-text-thumb-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                                </div>
+                                <img src="assets/img/svg-lemon.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>MOUSEFFECT</h5>
+                                    <p>SCRIPT</p>
+                                    <span>EFFECT</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+                     <!-- ANIMATION box3 -->
+                     <section class="color-shape design">
+                        <a href="illustrator/index.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">PARALLAX_EFFECT</span>
+                                    <span class="overlay-text-thumb-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                                </div>
+                                <img src="assets/img/svg-lemon.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>PARALLAX_EFFECT</h5>
+                                    <p>SCRIPT</p>
+                                    <span>EFFECT</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+                     <!-- ANIMATION box4 -->
+                     <section class="color-shape design">
+                        <a href="illustrator/index.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">SLIDER_EFFECT</span>
+                                    <span class="overlay-text-thumb-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                                </div>
+                                <img src="assets/img/svg-lemon.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>SLIDER_EFFECT</h5>
+                                    <p>SCRIPT</p>
+                                    <span>EFFECT</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+                     <!-- ANIMATION box5 -->
+                     <section class="color-shape design">
+                        <a href="illustrator/index.html" _blank>
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">GAME_EFFECT</span>
+                                    <span class="overlay-text-thumb-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb1-donut">SCRIPT</span>
+                                    <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                                </div>
+                                <img src="assets/img/svg-lemon.svg" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>GAME_EFFECT</h5>
+                                    <p>SCRIPT</p>
+                                    <span>EFFECT</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
+
+
+
                 </div>
                 <!-- //container-->
+                <div class="disqus">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document,
+                                s = d.createElement('script');
+                            s.src = 'https://kimjiwonuiux.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                            powered by Disqus.</a></noscript>
+                </div>
             </div>
             <!-- //row -->
         </div>
@@ -377,7 +756,7 @@
             <div class="row">
                 <div class="span12">
                     <h5>
-                        <a href="http://kjw911108.dothome.co.kr" target="_blank">Webstoryboy</a>
+                        <a href="http://kjw911108.dothome.co.kr" target="_blank">jiwonkim</a>
                         <span id="clock"></span>
                         <span id="infor"></span>
                     </h5>
