@@ -4,7 +4,24 @@
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
  * details,  see http://creativecommons.org/licenses/by/3.0/.
  */
-
+ @font-face {
+    font-family: 'LotteMartHappy';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'LotteMartHappy';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff') format('woff');
+  }
+  
+  .lottemarthappy * {
+   font-family: 'LotteMartHappy', sans-serif;
+  }
+  
 body {
     position: relative; 
 }
@@ -237,6 +254,9 @@ table em {border: 1px solid #000; font-style: normal; font-size: 80%; padding: 3
     font-size: 20px;
 }
 .bs-header h1 {
+    font-family: 'LotteMartHappy';
+    font-style: normal;
+    font-weight: 700;
     margin-top: 0;
     color: #fff;
 }
