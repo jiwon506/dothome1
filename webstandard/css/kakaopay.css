@@ -43,7 +43,12 @@ img, fieldset {border: 0 none;}
 #header ul li{display: inline-block; padding: 0 30px 0 0; font-size: 16px; font-weight: bold;}
 #header ul li a{ }
 
-/*contents1*/
-#cont1 {}
-#cont2 {}
-#cont3 {}
+/*배너*/
+#banner{background-image: url(../kakaopay/top-visual-retailfinance.jpg); height: 400px;}
+#banner h1{ font-size: 38px; color: #fff; font-weight: 600; position: absolute; top:350px; right: 1000px;}
+
+/*콘텐츠1*/
+#cont1 {  }
+#cont1 h1{font-size: 44px; font-weight: 600; color: black; margin-bottom: 5px;}
+#cont1 p{ font-size: 20px; }
+#cont1 span a{}
