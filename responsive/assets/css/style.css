@@ -1,0 +1,28 @@
+/* layout */
+#header { height: 327px; background: url(../img/header_bg.jpg) repeat-x center top; }
+
+/*container*/
+.container{ width: 1200px; margin: 0 auto; background: rgba(0,0,0,0.3);}
+
+/*header*/
+.header {}
+.header .header_menu{ text-align: right; }
+.header .header_menu a{ color: #fff; padding: 8px 0 6px 10px; display: inline-block; 
+    font-family: 'Anton', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Staatliches', cursive;
+    transition: color 0.3s;
+}
+.header .header_menu a:hover{color: #ccc; }
+
+.header .header_tit {text-align: center; padding-top: 55px; font-family: "Abel";   text-transform: uppercase;}
+.header .header_tit h1 {display: inline-block;  letter-spacing: 2px; font-weight: 900; background-color: #51b0dc; font-size: 30px; padding: 5px 30px ; color: #fff;}
+.header .header_tit h1:hover {box-shadow:inset 0 0 0 400px #4a9abf;  }
+.header .header_tit a {display: inline-block; background-color: #4a9abf; font-size: 16px; color: #fff; padding: 10px 20px; margin-top: -7px;} 
+.header .header_tit a:hover {box-shadow: 5px 5px 0 0 #51b0dc; } 
+.header .header_icon { }
+
+/* 미디어쿼리 */
+@media (max-width:1220px){
+    .container{width: 100%;}
+}
