@@ -46,8 +46,8 @@
 
         /* 전체 메뉴 */
         .nav {overflow: hidden; padding: 30px 0;}
-        .nav > div {float: left;}
-        .nav > div:last-child {width: 20%;} /* ie9부터 사용 가능 */
+        .nav > div {float: left; width: 40%;}
+        .nav > div:last-child {width: 20%; } /* ie9부터 사용 가능 */
         .nav > div.last {width: 20%;}
         .nav > div h3 {font-size: 18px; color: #25a2d0; margin-bottom: 4px;}
         .nav > div ol {overflow: hidden;}
