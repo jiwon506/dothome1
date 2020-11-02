@@ -75,6 +75,14 @@
     margin-bottom: 4px; 
     font-weight: bold;
 } 
+/*타이틀 메뉴*/
+article{background-color: #EAF7FD;width: 100%;margin: 0 auto;height: inherit;} 
+article h2{font-size: 40px; text-align: center; padding: 5px 0; letter-spacing: 2px; color: #2c94c4;}
+article a{}
+article .btn{}
+article i::after{
+}
+
 /* 미디어쿼리 */
 @media (max-width:1220px){
     .container{width: 100%;}
