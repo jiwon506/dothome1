@@ -1,3 +1,10 @@
+/*font*/
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* layout */
 #header { height: 327px; background: url(../img/header_bg.jpg) repeat-x center top; }
 #nav{background-color: #f6fdff;}
@@ -78,10 +85,13 @@
 } 
 /*타이틀 메뉴*/
 #title{text-align: center; position: relative;}
-#title h2{font-size: 39px; color: #0093bd; padding: 5px 0;} 
-#title .btn {position: absolute; right: 0; top: 0; 
+#title h2{font-family: 'yg-jalnan'; font-size: 39px; color: #0093bd; padding: 10px 0;} 
+#title .btn {
+position: absolute; right: 100px; top:10px; 
 width: 60px; height: 60px; line-height: 60px; background: #3192bf;
-color: #fff; font-size: 35px; border-radius: 50%; transition: all 0.3s ease;}
+color: #fff; font-size: 35px; border-radius: 50%;
+transition: all 0.3s ease;}
+#title .btn:hover {box-shadow: 0px 0px 0px 5px  #0083bd  inset; }
 
 /* 미디어쿼리 */
 @media (max-width:1220px){
