@@ -79,7 +79,6 @@
     <div class="container bs-docs-container">
         <div class="row">
             <div class="col-md-12" role="main">
-
                 <!--배너광고-->
 
                 <!--//배너광고-->
@@ -135,6 +134,7 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
                     <h2 id="intro2" class="page-header">Transition</h2>
                     <p class="bs-callout bs-callout-info">
                         transition : property | duration | time-function | delay
@@ -301,6 +301,7 @@
 .timing4.show {animation:move 2s 1 ease-out;}
 .timing5.show {animation:move 2s 1 ease-in-out;}  
 </code></pre>
+                </div>
                         <!-- //Intro1 -->
                         <style>
                             .timing>.bg2 {
@@ -348,9 +349,8 @@
                         </style>
                         <!-- Intro2 -->
                         <div class="bs-docs-section">
-                        </div>
+                            <h2 id="intro2" class="page-header">timing-function <button type="button" class="btn btn-warning start2">Start2</button></h2>
                         <div class="sample">
-                            <h2 id="intro1" class="page-header">timing-function <button type="button" class="btn btn-warning start2">Start2</button></h2>
                             <h3><span></span><em class="sr-only"> border-radius</em></h3>
                             <div class="boxWrapx timing bg2">
                                 <div class="timing6"><span>step-start</span></div>
@@ -366,6 +366,7 @@
 .timing4.show {animation:move 2s 1 ease-out;}
 .timing5.show {animation:move 2s 1 ease-in-out;}  
 </code></pre>
+                        </div>
                             <style>
                                 .step {
                                     position: relative;
@@ -426,59 +427,166 @@
                                         <a href="#" class="stepBtnStop">stop</a>
                                     </span>
                                 </div>
+                            </div>
+                        </div>
+
                                 <!-- //Intro2 -->
+                                <style>
+                                     .timing.bg3>div {
+                                        width: 100px;
+                                        height: 100px;
+                                        border-radius: 50%;
+                                        color: #fff;
+                                        text-align: center;
+                                        line-height: 100px;
+                                        margin: 10px;
+                                        position: relative;
+                                    }
+                                    .timing12 {animation: move 3s 2 cubic-bezier(0,.37,.44,.98);}
+                                    .timing13 {animation: move 3s 2 cubic-bezier(0,.37,.09,.9)}
+                                    .timing14 {animation: move 3s 2 cubic-bezier(.89,.39,.09,.9)}
+                                    .timing15 {animation: move 3s 2 cubic-bezier(.89,.39,0,.61)}
+                                    .timing16 {animation: move 3s 2 cubic-bezier(.05,1,.2,.91)}
+                                </style>
+
                                 <!-- Intro3 -->
                                 <div class="bs-docs-section">
-                                    <h2 id="intro1" class="page-header">timing-function <button type="button"
-                                            class="btn btn-warning start3">Start3</button></h2>
-                                    <h2 id="intro3" class="page-header">timing-function</h2>
-                                </div>
-                                <pre class="line-numbers language-css"><code>.timing1.show {animation:move 2s 1 linear; }
+                                    <h2 id="intro3" class="page-header">timing-function <button type="button" class="btn btn-warning start3">Start3</button></h2>
+                                    <div class="sample">
+                                        <h3><span></span><em class="sr-only"> border-radius</em></h3>
+                                        <div class="timing bg3">
+                                            <div class="timing12"><span>cubic-bezier</span></div>
+                                            <div class="timing13"><span>cubic-bezier</span></div>
+                                            <div class="timing14"><span>cubic-bezier</span></div>
+                                            <div class="timing15"><span>cubic-bezier</span></div>
+                                            <div class="timing16"><span>cubic-bezier</span></div>
+                                        </div>
+<pre class="line-numbers language-css"><code>.timing1.show {animation:move 2s 1 linear; }
 .timing2.show {animation:move 2s 1 ease;}
 .timing3.show {animation:move 2s 1 ease-in;}
 .timing4.show {animation:move 2s 1 ease-out;}
 .timing5.show {animation:move 2s 1 ease-in-out;}  
 </code></pre>
+                     </div>
                                 <!-- //Intro3 -->
+                                <style>
+                                    .timing.bg4 > div {
+                                        width: 100px;
+                                        height: 100px;
+                                        border-radius: 50%;
+                                        color: #fff;
+                                        text-align: center;
+                                        line-height: 100px;
+                                        margin: 10px;
+                                        position: relative;
+                                    }
+                                    .timing18.show{animation: move 3s 0.1s 2 ease; }
+                                    .timing19.show{animation: move 3s 0.2s 2 ease; }
+                                    .timing20.show{animation: move 3s 0.3s 2 ease; }
+                                    .timing21.show{animation: move 3s 0.4s 2 ease; }
+                                </style>
                                 <!-- Intro4 -->
                                 <div class="bs-docs-section">
-                                    <h2 id="intro1" class="page-header">timing-function <button type="button"
-                                            class="btn btn-warning start4">Start4</button></h2>
-                                    <h2 id="intro4" class="page-header">timing-function</h2>
-                                </div>
+                                    <h2 id="intro4" class="page-header">timing-function <button type="button" class="btn btn-warning start4">Start4</button></h2>
+                                    <div class="sample">
+                                        <h3><span></span><em class="sr-only"> border-radius</em></h3>
+                                        <div class="boxWrapx timing bg4">
+                                            <div class="timing18"><span>cubic-bezier</span></div>
+                                            <div class="timing19"><span>cubic-bezier</span></div>
+                                            <div class="timing20"><span>cubic-bezier</span></div>
+                                            <div class="timing21"><span>cubic-bezier</span></div>
+                                        </div>
                                 <pre class="line-numbers language-css"><code>.timing1.show {animation:move 2s 1 linear; }
 .timing2.show {animation:move 2s 1 ease;}
 .timing3.show {animation:move 2s 1 ease-in;}
 .timing4.show {animation:move 2s 1 ease-out;}
 .timing5.show {animation:move 2s 1 ease-in-out;}  
 </code></pre>
+                            </div>
                                 <!-- //Intro4 -->
-                                <!-- Intro5 -->
-                                <div class="bs-docs-section">
-                                    <h2 id="intro1" class="page-header">timing-function <button type="button"
-                                            class="btn btn-warning start5">Start5</button></h2>
-                                    <h2 id="intro5" class="page-header">timing-function</h2>
-                                </div>
-                                <pre class="line-numbers language-css"><code>.timing1.show {animation:move 2s 1 linear; }
+                                
+                                <style>
+                                    .timing.bg5 > div {
+                                        width: 100px;
+                                        height: 100px;
+                                        border-radius: 50%;
+                                        color: #fff;
+                                        text-align: center;
+                                        line-height: 100px;
+                                        margin: 10px;
+                                        position: relative;
+                                    }
+                                    .timing22.show {animation: move 2s 1 ease; }
+                                    .timing23.show {animation: move 2s 2 ease; }
+                                    .timing24.show {animation: move 2s 3 ease; }
+                                    .timing25.show {animation: move 2s infinite ease; }
+                                </style>
+                               <!-- Intro5 -->
+                               <div class="bs-docs-section">
+                                <div class="sample">
+                                    <h2 id="intro5" class="page-header"> animation-iteration-count <button type="button" class="btn btn-warning start5">Start5</button></h2>
+                                    <h3><span></span><em class="sr-only"> border-radius</em></h3>
+                                    <div class="boxWrapx timing bg5">
+                                        <div class="timing22"><span>cubic-bezier22</span></div>
+                                        <div class="timing23"><span>cubic-bezier23</span></div>
+                                        <div class="timing24"><span>cubic-bezier24</span></div>
+                                        <div class="timing25"><span>cubic-bezier25</span></div>
+                                    </div>
+                            </div>
+                            <pre class="line-numbers language-css"><code>.timing1.show {animation:move 2s 1 linear; }
 .timing2.show {animation:move 2s 1 ease;}
 .timing3.show {animation:move 2s 1 ease-in;}
 .timing4.show {animation:move 2s 1 ease-out;}
 .timing5.show {animation:move 2s 1 ease-in-out;}  
 </code></pre>
-                                <!-- //Intro5 -->
-                                <!-- Intro6 -->
-                                <div class="bs-docs-section">
-                                    <h2 id="intro1" class="page-header">timing-function <button type="button"
-                                            class="btn btn-warning start6">Start6</button></h2>
-                                    <h2 id="intro6" class="page-header">timing-function</h2>
-                                </div>
-                                <pre class="line-numbers language-css"><code>.timing1.show {animation:move 2s 1 linear; }
+                        </div>
+                            <!-- //Intro5 -->
+                            <style>
+                                .timing.bg6 {height: 600px;}
+                                .timing.bg6 > div {
+                                    width: 100px;
+                                    height: 100px;
+                                    border-radius: 50%;
+                                    color: #fff;
+                                    text-align: center;
+                                    line-height: 100px;
+                                    margin: 10px;
+                                    position: relative;
+                                }
+                                .timing26.normal {animation: move2 4s 5 ease normal; }
+                                .timing27.reverse {animation: move2 4s 5 ease reverse; }
+                                .timing28.alternate {animation: move2 4s 5 ease alternate; }
+                                .timing29.alternate-reverse {animation: move2 4s 5 ease alternate-reverse; }
+                                @keyframes move2{
+                                    0%{left: 0; top: 0;}
+                                    25%{left: calc(100% - 120px); top: 0;}
+                                    50%{left: calc(100% - 120px); top: 100%;}
+                                    75%{left: 0; top:calc(100% - 120px);}
+                                    100%{left: 0; top: 0;}
+                                }
+                            </style>
+                            <!-- Intro6 -->
+                            <div class="bs-docs-section">
+                                <div class="sample">
+                                    <h2 id="intro6" class="page-header"> animation-iteration-count  </h2>
+                                        <button type="button" class="btn btn-warning start6-1">normal</button></h2>
+                                        <button type="button" class="btn btn-warning start6-2">reverse</button></h2>
+                                        <button type="button" class="btn btn-warning start6-3">alternate</button></h2>
+                                        <button type="button" class="btn btn-warning start6-4">alternate-reverse</button>
+
+                                    <h3><span></span><em class="sr-only"> border-radius</em></h3>
+                                    <div class="boxWrapx timing bg6">
+                                        <div class="timing26"><span>26</span></div>
+                                    </div>
+                            </div>
+                            <pre class="line-numbers language-css"><code>.timing1.show {animation:move 2s 1 linear; }
 .timing2.show {animation:move 2s 1 ease;}
 .timing3.show {animation:move 2s 1 ease-in;}
 .timing4.show {animation:move 2s 1 ease-out;}
 .timing5.show {animation:move 2s 1 ease-in-out;}  
 </code></pre>
-                                <!-- //Intro6 -->
+                        </div>
+                            <!-- //Intro6 -->
                                 <!-- Intro7 -->
                                 <div class="bs-docs-section">
                                     <h2 id="intro7" class="page-header">timing-function</h2>
@@ -571,6 +679,39 @@
                             $(".stepBtnStop").click(function (e) {
                                 e.preventDefault
                                 $(".stepbox").removeClass("start").addClass("stop");
+                            });
+
+                            $(".start3").click(function () {
+                                $(".timing.bg3 > div").addClass("show");
+                                setTimeout(function () {
+                                    $(".timing > div").removeClass("show");
+                                }, 4000);
+                            });
+
+                            $(".start4").click(function () {
+                                $(".timing.bg4 > div").addClass("show");
+                                setTimeout(function () {
+                                    $(".timing > div").removeClass("show");
+                                }, 6000);
+                            });
+
+                            $(".start5").click(function () {
+                                $(".timing.bg5 > div").addClass("show");
+                            });
+
+                            $(".start6").click(function () {
+                                $(".timing.bg6 > div").addClass("show");
+                                setTimeout(function () {
+                                    $(".timing > div").removeClass("show");
+                                }, 10000);
+                            });
+
+
+                            $("#intro6 > button").click(function(){
+                                $(this).text();
+                                 const txt =$(this).text();
+                                 $(".timing26").addClass(txt);
+                                //  $("button").removeClass(txt);
                             });
                         </script>
 </body>

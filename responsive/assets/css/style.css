@@ -8,7 +8,8 @@
     margin: 0 auto; 
     /* background: rgba(0,0,0,0.3); */
 }
-
+/*title*/
+#title {background-color: #eaf7fd;}
 /*header*/
 .header .header_menu{ text-align: right; }
 .header .header_menu a{ color: #fff; padding: 8px 0 6px 10px; display: inline-block; 
@@ -76,12 +77,11 @@
     font-weight: bold;
 } 
 /*타이틀 메뉴*/
-article{background-color: #EAF7FD;width: 100%;margin: 0 auto;height: inherit;} 
-article h2{font-size: 40px; text-align: center; padding: 5px 0; letter-spacing: 2px; color: #2c94c4;}
-article a{}
-article .btn{}
-article i::after{
-}
+#title{text-align: center; position: relative;}
+#title h2{font-size: 39px; color: #0093bd; padding: 5px 0;} 
+#title .btn {position: absolute; right: 0; top: 0; 
+width: 60px; height: 60px; line-height: 60px; background: #3192bf;
+color: #fff; font-size: 35px; border-radius: 50%; transition: all 0.3s ease;}
 
 /* 미디어쿼리 */
 @media (max-width:1220px){
