@@ -1,54 +1,36 @@
-/* 여백 초기화 */
-body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, th, td, tr, textarea, button, form {margin: 0; padding: 0;}
-
-/* a 링크 초기화 */
-a {color: #222; text-decoration: none;}
-a:hover {color: #390;}
-
-/* 폰트 초기화 */
-body, input, textarea, select, button, table {
-    font-family:'Nanum Gothic', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #222; font-size: 13px; line-height: 1.5;}
-
-/* 폰트 스타일 초기화 */
-em, address {font-style: normal;}
-
-/* 블릿기호 초기화 */    
-dl, ul, li, ol, menu {list-style: none;}
-
-/* 제목 태그 초기화 */
-h1, h2, h3, h4, h5, h6 {font-size: 13px; color:#222; font-weight: normal;}
-
-/* 테두리 초기화 */
-img, fieldset {border: 0 none;}
-
-/* IR 효과 */
-.ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;} /* 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
-.ir_wa {display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%;} /* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
-.ir_su {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;} /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
-
+/*font*/
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /*layout*/
-#wrap {width: 100%; }
-#header {width: 100%; height:73px; background-color: #999999; }
-#banner {width: 100%; height: 403px;  background-color: #999988; }
-#contents {width: 100%; height: 700px;  background-color: #999888; }
-#footer {width: 100%; height: 311px;  background-color: #998888;}
+#wrap {width: 100%;    font-family: 'S-CoreDream-5Medium';}
+#header {width: 100%; height: 90px; background: #fff; }
+#header h1{ float: left;  }
+#header a.logo{display: inline-block; padding: 30px 0 0 100px;}
+#header ul{ overflow: hidden; float: right; margin: 20px 100px 0 0;}
+#header li{ float: left; font-size: 18px; font-weight: 600; padding: 13px;  }
+#banner {width: 100%; height: 470px; background: #ffac1f; background: url(../kakaopay/top-visual-retailfinance.jpg) center top no-repeat;} 
+#banner h2{font-size: 50px; font-weight: 800; color: #fff; padding: 350px 0 0 0;}
+#section {width: 100%;  background: #fff; }
+#section_1 {width: 100%; height: 370px; background:#fff;}
+#section_1 .section_1_1{ padding: 0 0 0 0; position: relative;}
+#section_1 .section_1_1 h3{font-size: 44px;  font-weight: 800;   color: #1e1e1e;  margin:60px 0 30px 0; }
+#section_1 .section_1_1 p{line-height: 60px; font-size: 20px; color: #666; font-weight: bold; margin: 0 30px 0 0;}
+#section_1 .section_1_1 a{ position: absolute; top: 100px; right: 100px;}
+#section_2 {width: 100%;  overflow: hidden;}
+#section_2 .section_2left{width: 50%; height: 400px; float: left;background: url(../kakaopay/pic-retailfinance1.jpg) center top no-repeat;}
+#section_2 .section_2right{width: 50%; height: 400px;float: left; } 
+#section_2 .section_2right h3{font-size: 40px;    font-weight: 600;    color: #1e1e1e;    margin-bottom: 5%; padding: 50px 0 0 30px;} 
+#section_2 .section_2right p{font-size: 18px;    font-weight: 600;  line-height: 50px;  color: #1e1e1e;    margin-bottom: 5%; padding: 50px 0 0 30px; } 
+#section_3 {clear: both; width: 100%;}
+#section_3 .section_3_left{ width: 50%; height: 400px;float: left; }
+#section_3 .section_3_left h3{ font-size: 40px;    font-weight: 600;    color: #1e1e1e;    margin-bottom: 5%; padding: 50px 0 0 30px; }
+#section_3 .section_3_left p {font-size: 18px;    font-weight: 600;  line-height: 50px;  color: #1e1e1e;    margin-bottom: 5%; padding: 50px 0 0 30px; }
+#section_3 .section_3_right {width: 50%; height:400px; float:right;background: url(../kakaopay/pic-retailfinance2.png) center top no-repeat; }
+#footer {width: 100%; height: 310px; background: black;}
 
 /*container*/
-.container {height: inherit; width: 1140px; margin: 0 auto; background:rgba(255, 255, 255, 0.3); }
-
-/*haeder*/
-#header h1 { width: 215px; display: inline-block; overflow: hidden; padding-top: 20px; padding-left: 20px;}
-#header img{ }
-#header ul {  float: right; padding-top: 20px; padding-right: 20px;}
-#header ul li{display: inline-block; padding: 0 30px 0 0; font-size: 16px; font-weight: bold;}
-#header ul li a{ }
-
-/*배너*/
-#banner{background-image: url(../kakaopay/top-visual-retailfinance.jpg); height: 400px;}
-#banner h1{ font-size: 38px; color: #fff; font-weight: 600; position: absolute; top:350px; right: 1000px;}
-
-/*콘텐츠1*/
-#cont1 {  }
-#cont1 h1{font-size: 44px; font-weight: 600; color: black; margin-bottom: 5px;}
-#cont1 p{ font-size: 20px; }
-#cont1 span a{}
+.container { width: 1400px; margin: 0 auto; height: inherit; }

@@ -1,0 +1,45 @@
+/* layout */
+#header { height: 327px; background: url(../img/header_bg.jpg) repeat-x center top; }
+
+/*container*/
+.container{ width: 1200px; margin: 0 auto; background: rgba(0,0,0,0.3);}
+
+/*header*/
+.header {}
+.header .header_menu{ text-align: right; }
+.header .header_menu a{ color: #fff; padding: 8px 0 6px 10px; display: inline-block; 
+    font-family: 'Anton', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Staatliches', cursive;
+    transition: color 0.3s;
+}
+.header .header_menu a:hover{color: #ccc; }
+.header .header_tit {text-align: center; padding-top: 55px; font-family: "Abel";   text-transform: uppercase;}
+.header .header_tit h1 {display: inline-block;  letter-spacing: 2px; font-weight: 900; background-color: #51b0dc; font-size: 30px; padding: 5px 30px ; color: #fff;}
+.header .header_tit h1:hover {box-shadow:inset 0 0 0 400px #fff;  color:#4a9abf ; transition: all 0.3s; cursor: alias;}
+.header .header_tit a {display: inline-block; background-color: #4a9abf; font-size: 16px; color: #fff; padding: 10px 20px; margin-top: -7px;} 
+.header .header_tit a:hover {box-shadow: 3px 3px 0 0 #fff; transition: all 0.3s; cursor: alias;} 
+.header .header_icon { text-align: center; margin-top: 40px ; padding-bottom: 40px;}
+.header .header_icon li{ display: inline; margin: 0 2px; }
+.header .header_icon li a{
+    transition: all 0.25s ease-in-out;
+    position: relative; color: white; font-size: 35px; background: #3192bf; width: 60px; height: 60px; display: inline-block; line-height: 60px; border-radius: 50%;}
+.header .header_icon li a span{line-height: 1.6;font-size: 12px;position: absolute;left: 50px; top: -45px;transform:  translateX(-50%); background: #319edf;
+    padding: 3px 9px;border-radius: 6px 0;opacity: 0; transition: all 0.3s;}
+.header .header_icon li a:hover span {opacity: 1; top:-33px;}
+.header .header_icon li a span::before{
+    content: '';
+    border-top: 5px solid #319edf;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;left: 50%; bottom: -5px;
+    margin-left: -5px;
+}
+.header .header_icon li a:hover{
+    box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+
+/* 미디어쿼리 */
+@media (max-width:1220px){
+    .container{width: 100%;}
+}
