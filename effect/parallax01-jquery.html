@@ -62,10 +62,12 @@
             right: 20px;
             top: 20px;
         }
+
         .info.bottom {
             right: 20px;
             bottom: 20px;
         }
+
         .info h1 {
             font-size: 2rem;
             line-height: 1.4;
@@ -74,11 +76,13 @@
         .info p {
             font-size: 1rem;
         }
+
         .info li {
             font-size: 1rem;
             line-height: 1.4;
         }
-        .info li a{
+
+        .info li a {
             color: #fff;
             width: 25px;
             height: 25px;
@@ -90,13 +94,18 @@
             font-size: 0.8rem;
             margin: 5px;
         }
+
         .info li a.active {
             background: #fff;
             color: #000;
-        }      
-        @media (max-width: 800px){
-            .info h1{display: none;}
         }
+
+        @media (max-width: 800px) {
+            .info h1 {
+                display: none;
+            }
+        }
+
         /*main*/
         body {
             --color-h1: #dc6e25;
@@ -264,40 +273,49 @@
         } */
 
         /*개별적으로 나타나기*/
-        .contents > section .content-item-num{
+        .contents>section .content-item-num {
             opacity: 0;
             transform: translateY(200px);
-            transition: all 1s  0.1s cubic-bezier(0, 0.68, 0.22, 0.99);
-        }
-        .contents > section.show .content-item-num{
-            opacity: 1; transform: translateY(0);
+            transition: all 1s 0.1s cubic-bezier(0, 0.68, 0.22, 0.99);
         }
 
-        .contents > section .content-item-title{
-            opacity: 0; 
+        .contents>section.show .content-item-num {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contents>section .content-item-title {
+            opacity: 0;
             transform: translateX(200px);
             transition: all 1s 0.3s cubic-bezier(0, 0.68, 0.22, 0.99);
         }
-        .contents > section.show  .content-item-title{
-            opacity: 1; transform: translateY(0);
+
+        .contents>section.show .content-item-title {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .contents > section .content-item-title-imgWrap{
+        .contents>section .content-item-title-imgWrap {
             opacity: 0;
             transform: translateY(200px);
             transition: all 1s 0.6s cubic-bezier(0, 0.68, 0.22, 0.99);
         }
-        .contents > section.show  .content-item-title-imgWrap{
-            opacity: 1;  transform: translateY(0);
+
+        .contents>section.show .content-item-title-imgWrap {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .contents > section .content-item-desc{
+        .contents>section .content-item-desc {
             opacity: 0;
             transform: translateY(200px);
-            opacity: 0;transition: all 1s 0.9s cubic-bezier(0, 0.68, 0.22, 0.99);
+            opacity: 0;
+            transition: all 1s 0.9s cubic-bezier(0, 0.68, 0.22, 0.99);
         }
-        .contents > section.show  .content-item-desc{
-            opacity: 1; transform: translateY(0);
+
+        .contents>section.show .content-item-desc {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -417,117 +435,137 @@
         </section>
     </main>
 
-    <!-- script 연동 -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script>
-        //h1태그를 클릭하면 모든 글씨를 빨간색으로 변경
-        // $("h1").click(function(){
-        //     $("*").css("color","red");
+<!-- script 연동 -->
+<script src="../assets/js/jquery-1.9.1.min.js"></script>
+<script>
+    //h1태그를 클릭하면 모든 글씨를 빨간색으로 변경
+    // $("h1").click(function(){
+    //     $("*").css("color","red");
+    // });
+    //h1태그를 클릭하면 클릭한 글씨를 alert으로 출력
+    // $("h1").click(function(){
+    //     let txt = $("h1").text();
+    //     alert (txt);
+    // });
+
+    $(window).scroll(function () {
+        const scrollTop = $(window).scrollTop() + $(window).height() / 2;
+        //$(".scrollTop").text(scrollTop);
+        // //parseInt(scrollTop) 정수로 나오게 하는방법
+        // $(".s1OffsetTop").text(parseInt($("#section1").offset().top ));
+        // $(".s2OffsetTop").text(parseInt($("#section2").offset().top ));
+        // $(".s3OffsetTop").text(parseInt($("#section3").offset().top ));
+        // $(".s4OffsetTop").text(parseInt($("#section4").offset().top ));
+        // $(".s5OffsetTop").text(parseInt($("#section5").offset().top ));
+        // $(".s6OffsetTop").text(parseInt($("#section6").offset().top ));
+        // $(".s7OffsetTop").text(parseInt($("#section7").offset().top ));
+        // $(".s8OffsetTop").text(parseInt($("#section8").offset().top ));
+        // $(".s9OffsetTop").text(parseInt($("#section9").offset().top ));
+
+
+        if (scrollTop > $("#section1").offset().top) {
+            $(".s1OffsetTop").css("color", "red");
+        } else {
+            $("#section1").css("color", "white");
+        };
+
+        if (scrollTop > $("#section2").offset().top) {
+            $(".s2OffsetTop").css("color", "red");
+        } else {
+            $("#section2").css("color", "white");
+        };
+
+        if (scrollTop > $("#section3").offset().top) {
+            $(".s3OffsetTop").css("color", "red");
+        } else {
+            $("#section3").css("color", "white");
+        };
+
+        if (scrollTop > $("#section4").offset().top) {
+            $(".s4OffsetTop").css("color", "red");
+        } else {
+            $("#section4").css("color", "white");
+        };
+
+        if (scrollTop > $("#section5").offset().top) {
+            $(".s5OffsetTop").css("color", "red");
+        } else {
+            $("#section5").css("color", "white");
+        };
+
+        if (scrollTop > $("#section6").offset().top) {
+            $(".s6OffsetTop").css("color", "red");
+        } else {
+            $("#section6").css("color", "white");
+        };
+
+        if (scrollTop > $("#section7").offset().top) {
+            $(".s7OffsetTop").css("color", "red");
+        } else {
+            $("#section7").css("color", "white");
+        };
+
+        if (scrollTop > $("#section8").offset().top) {
+            $(".s8OffsetTop").css("color", "red");
+        } else {
+            $("#section8").css("color", "white");
+        };
+
+        if (scrollTop > $("#section9").offset().top) {
+            $(".s9OffsetTop").css("color", "red");
+        } else {
+            $("#section9").css("color", "white");
+        };
+
+
+        //나타나기
+        //     if( scrollTop > $("#section1").offset().top ) {
+        //         $("#section1").addClass("show");
+        //     } 
+        //     if( scrollTop > $("#section2").offset().top ) {
+        //         $("#section2").addClass("show");
+        //     }
+        //     if( scrollTop > $("#section3").offset().top ) {
+        //         $("#section3").addClass("show");
+        //     }
+        //     if( scrollTop > $("#section4").offset().top ) {
+        //         $("#section4").addClass("show");
+        //     }
+        //     if( scrollTop > $("#section5").offset().top ) {
+        //         $("#section5").addClass("show");
+        //     }
+        //     if( scrollTop > $("#section6").offset().top ) {
+        //         $("#section6").addClass("show");
+        //     }
+        //     if( scrollTop > $("#section7").offset().top ) {
+        //         $("#section7").addClass("show");
+        //     }
+        //     if( scrollTop > $("#section8").offset().top ) {
+        //         $("#section8").addClass("show");
+        //     }
+        //     if( scrollTop > $("#section9").offset().top ) {
+        //         $("#section9").addClass("show");
+        //     }
         // });
-        //h1태그를 클릭하면 클릭한 글씨를 alert으로 출력
-        // $("h1").click(function(){
-        //     let txt = $("h1").text();
-        //     alert (txt);
+        //for문으로 출력
+        //  for(let i = 1; i <= $(".content-item").length; i++){
+        //         if( scrollTop > $("#section"+i ).offset().top){
+        //             $("#section"+i ).addClass("show");
+        //         } else {
+        //             $("#section"+i ).removeClass("show");
+        //         }
+        //     }
         // });
-        $(window).scroll(function( ){
-            const scrollTop = $(window).scrollTop() + $(window).height() /2;
-            $(".scrollTop").text(scrollTop);
-            //parseInt(scrollTop) 정수로 나오게 하는방법
-
-            $(".s1OffsetTop").text(parseInt($("#section1").offset().top ));
-            $(".s2OffsetTop").text(parseInt($("#section2").offset().top ));
-            $(".s3OffsetTop").text(parseInt($("#section3").offset().top ));
-            $(".s4OffsetTop").text(parseInt($("#section4").offset().top ));
-            $(".s5OffsetTop").text(parseInt($("#section5").offset().top ));
-            $(".s6OffsetTop").text(parseInt($("#section6").offset().top ));
-            $(".s7OffsetTop").text(parseInt($("#section7").offset().top ));
-            $(".s8OffsetTop").text(parseInt($("#section8").offset().top ));
-            $(".s9OffsetTop").text(parseInt($("#section9").offset().top ));
-
-            if(scrollTop > $("#section1").offset().top ) {
-                $(".s1OffsetTop").css("color","red");
-            }else {
-                $("#section1").css("color","white");
-            };
-
-            if(scrollTop > $("#section2").offset().top ) {
-                $(".s2OffsetTop").css("color","red");
-            }else {
-                $("#section2").css("color","white");
-            };
-
-            if(scrollTop > $("#section3").offset().top ) {
-                $(".s3OffsetTop").css("color","red");
-            }else {
-                $("#section3").css("color","white");
-            };
-
-            if(scrollTop > $("#section4").offset().top ) {
-                $(".s4OffsetTop").css("color","red");
-            }else {
-                $("#section4").css("color","white");
-            };
-
-            if(scrollTop > $("#section5").offset().top ) {
-                $(".s5OffsetTop").css("color","red");
-            }else {
-                $("#section5").css("color","white");
-            };
-
-            if(scrollTop > $("#section6").offset().top ) {
-                $(".s6OffsetTop").css("color","red");
-            }else {
-                $("#section6").css("color","white");
-            };
-
-            if(scrollTop > $("#section7").offset().top ) {
-                $(".s7OffsetTop").css("color","red");
-            }else {
-                $("#section7").css("color","white");
-            };
-
-            if(scrollTop > $("#section8").offset().top ) {
-                $(".s8OffsetTop").css("color","red");
-            }else {
-                $("#section8").css("color","white");
-            };
-
-            if(scrollTop > $("#section9").offset().top ) {
-                $(".s9OffsetTop").css("color","red");
-            }else {
-                $("#section9").css("color","white");
-            };
-            
-            //나타나기
-            if( scrollTop > $("#section1").offset().top ) {
-                $("#section1").addClass("show");
-            } 
-            if( scrollTop > $("#section2").offset().top ) {
-                $("#section2").addClass("show");
-            }
-            if( scrollTop > $("#section3").offset().top ) {
-                $("#section3").addClass("show");
-            }
-            if( scrollTop > $("#section4").offset().top ) {
-                $("#section4").addClass("show");
-            }
-            if( scrollTop > $("#section5").offset().top ) {
-                $("#section5").addClass("show");
-            }
-            if( scrollTop > $("#section6").offset().top ) {
-                $("#section6").addClass("show");
-            }
-            if( scrollTop > $("#section7").offset().top ) {
-                $("#section7").addClass("show");
-            }
-            if( scrollTop > $("#section8").offset().top ) {
-                $("#section8").addClass("show");
-            }
-            if( scrollTop > $("#section9").offset().top ) {
-                $("#section9").addClass("show");
-            }
-        });
-    </script>
+        //each();
+        // $(".content-item").each(function( ) {
+        //     if( scrollTop > $(this).offset().top){
+        //             $(this).addClass("show");
+        //         } else {
+        //             $(this).removeClass("show");
+        //         }
+        // });
+    });
+</script>
 </body>
 
 </html>
