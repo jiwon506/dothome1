@@ -1,11 +1,23 @@
+/*font*/
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* layout */
 #header { height: 327px; background: url(../img/header_bg.jpg) repeat-x center top; }
+#nav{background-color: #f6fdff;}
 
 /*container*/
-.container{ width: 1200px; margin: 0 auto; background: rgba(0,0,0,0.3);}
-
+.container{ 
+    width: 1200px; 
+    margin: 0 auto; 
+    /* background: rgba(0,0,0,0.3); */
+}
+/*title*/
+#title {background-color: #eaf7fd;}
 /*header*/
-.header {}
 .header .header_menu{ text-align: right; }
 .header .header_menu a{ color: #fff; padding: 8px 0 6px 10px; display: inline-block; 
     font-family: 'Anton', sans-serif;
@@ -38,6 +50,48 @@
 .header .header_icon li a:hover{
     box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;
 }
+
+/*전체메뉴*/
+.nav {overflow: hidden; padding: 25px 0;}
+.nav > div {float: left; width: 40%;}
+.nav > div:last-child {width: 20%;}
+.nav > div  ol li{overflow: hidden;}
+.nav > div  li{ float: left; width: 50%; position: relative; padding-left: 8px; box-sizing: border-box; }
+.nav > div  li::before {
+    content: '';
+    width: 3px; height: 3px;
+    background-color: #25a2d0;
+    border-radius: 50%;
+    position: absolute; left: 0px; top: 10px;
+}
+.nav > div  li:hover a::after {
+    width: 100%;
+}
+.nav > div  li a{position: relative;  transition: all 0.3s ease-out;}
+.nav > div  li a::after {
+    content: ' ';
+    width: 0%; height: 1px;
+    background: #25aad0;
+    position: absolute;
+    bottom: 0; left: 0;
+    transition: all 0.3s ease-out;
+}
+.nav > div:last-child  li{float: left; width: 100%;}
+.nav > div h3 {
+    font-size: 18px; 
+    color: #25a2d0; 
+    margin-bottom: 4px; 
+    font-weight: bold;
+} 
+/*타이틀 메뉴*/
+#title{text-align: center; position: relative;}
+#title h2{font-family: 'yg-jalnan'; font-size: 39px; color: #0093bd; padding: 10px 0;} 
+#title .btn {
+position: absolute; right: 100px; top:10px; 
+width: 60px; height: 60px; line-height: 60px; background: #3192bf;
+color: #fff; font-size: 35px; border-radius: 50%;
+transition: all 0.3s ease;}
+#title .btn:hover {box-shadow: 0px 0px 0px 5px  #0083bd  inset; }
 
 /* 미디어쿼리 */
 @media (max-width:1220px){
