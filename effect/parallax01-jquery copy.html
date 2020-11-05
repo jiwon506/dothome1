@@ -508,23 +508,23 @@
             // }
 
             //for문
-                    // $(window).scroll(function(){
-                    //     const scrollTop = $(window).scrollTop() +$(window).height( )/ 2;
-                    //     $(".scrollTop").text(parseInt(scrollTop));
-                    //     for(let i=1; i<=9; i++){
-                    //         //출력용
-                    //         $(".s"+i+"OffsetTop").text( parseInt($("#section"+i).offset().top) );
-                    //         if( scrollTop > $("#section"+i).offset().top ){
-                    //             $(".s"+i+"OffsetTop").css("color","red");
-                    //             //나타나기
-                    //             $("#section"+i).addClass("show");
-                    //         } else {
-                    //             $(".s"+i+"OffsetTop").css("color","white");
-                    //             //나타나기
-                    //             $("#section"+i).removeClass("show");
-                    //         }
-                    //     }
-                    // });
+                    $(window).scroll(function(){
+                        const scrollTop = $(window).scrollTop() +$(window).height( )/ 2;
+                        $(".scrollTop").text(parseInt(scrollTop));
+                        for(let i=1; i<=9; i++){
+                            //출력용
+                            $(".s"+i+"OffsetTop").text( parseInt($("#section"+i).offset().top) );
+                            if( scrollTop > $("#section"+i).offset().top ){
+                                $(".s"+i+"OffsetTop").css("color","red");
+                                //나타나기
+                                $("#section"+i).addClass("show");
+                            } else {
+                                $(".s"+i+"OffsetTop").css("color","white");
+                                //나타나기
+                                $("#section"+i).removeClass("show");
+                            }
+                        }
+                    });
 
              //each()
             $(window).scroll(function(){
