@@ -1,3 +1,10 @@
+/*폰트*/
+@font-face {
+    font-family: 'Jal_Onuel';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* 레이아웃 */
 body {background: url(../img/header_bg.jpg) repeat-x center top; }
 #header {height: 327px;}
@@ -8,7 +15,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
     border-left: 1px solid #dbdbdb;
 }
 #cont_left {float: left; width: 250px;}
-#cont_center {overflow: hidden; min-height: 1300px; margin-right: 250px; border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb;}
+#cont_center {overflow: hidden; min-height: 1320px; margin-right: 250px; border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb;}
 #cont_right {position: absolute; right: 0; top: 0; width: 250px;}
 #footer {height: 200px; border-top: 1px solid #dbdbdb;}
 
@@ -262,6 +269,23 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
 /*video*/
 .video {position: relative; width: 100%; padding-bottom: 56.25%;}
 .video iframe{position: absolute; width: 100%; height: 100%;}
+
+/*footer*/
+.footer {text-align: center; padding: 30px 50px; }
+.footer ul{}
+.footer li{ position: relative; display: inline; padding: 0 7px 0 10px; word-break: keep-all; } 
+.footer li::before{
+    content: '';
+    width: 1px; height: 12px;
+    background: #dbdbdb;
+    position: absolute; left: 0; top: 2px;
+}
+.footer li:first-child::before{
+    width: 0; height: 0;
+}
+
+.footer a{}
+.footer address{ padding-top: 15px; font-style: normal;}
 /* 미디어쿼리 */
 @media (max-width: 1220px){
     .container {width: 100%;}
@@ -279,8 +303,14 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
 }
 @media (max-width: 960px){
     #cont_center {margin-right: 0; border-right: 0;}
-    #cont_right {position: static; width: 100%;}
+    #cont_right {display: inline-block; position: static; width: 100%;}
     #cont_center {margin-right: 0;}
+    
+    /*rightside 3단으로 바뀌게*/
+    #cont_right {overflow: hidden; border-top: 1px solid #dbdbdb;}
+    #cont_right .column {float: left; width: 33.3333%; box-sizing: border-box;}
+    #cont_right .column.col7 {border-right: 1px solid #dbdbdb; border-bottom: 0;}
+    #cont_right .column.col8 {border-right: 1px solid #dbdbdb; border-bottom: 0;}
 
     .nav > div {float: none; width: 100%;}
     .nav > div:last-child {width: 100%;}
@@ -292,6 +322,10 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
 @media (max-width: 768px){
     #cont_left {float: none; width: 100%;}
     #cont_center { border-left: 0;}
+
+    /*rightside 3단으로 바뀌게*/
+    #cont_right .column {width: 50%;}}
+    #cont_right .column.col8 {display: none;}
 }
 
 @media (max-width: 630px){
@@ -322,4 +356,12 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
 
 @media (max-width: 320px){
     .square a {width:100%; margin: 1% 0;}
+
+        /*rightside 3단으로 바뀌게*/
+        #cont_right .columm {
+            width: 100%;
+        }
+        #cont_right .columm.col7{
+            border-right: 0;
+        }
 }
