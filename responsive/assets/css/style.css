@@ -324,7 +324,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
     #cont_center { border-left: 0;}
 
     /*rightside 3단으로 바뀌게*/
-    #cont_right .column {width: 50%;}}
+    #cont_right .column {width: 50%;}
     #cont_right .column.col8 {display: none;}
 }
 
