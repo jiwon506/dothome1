@@ -51,7 +51,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
 .header_tit h1:hover {
     box-shadow: inset -250px 0 0 0 #257fac,
                 inset 250px 0 0 0 #257fac;
-    transform: translatey(-4px);
+    transform: translateY(-4px);
     transition: 0.5s;
 }
 .header_tit a:hover {
@@ -93,7 +93,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
 .nav > div:last-child li {width: 100%;}
 
 /* 타이틀 */
- .tit {position: relative; text-align: center;}
+.tit {position: relative; text-align: center;}
 .tit h2 {font-family: 'Jal_Onuel'; font-size: 39px; color: #0093bd; padding: 5px 0;}
 .tit .btn {
     position: absolute; right: 0; top: 5px;
