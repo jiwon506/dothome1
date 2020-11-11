@@ -1,251 +1,313 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="moongleummum">
+    <meta name="author" content="soewon">
     <meta name="description" content="반응형 사이트 따라하기">
-    <meta name="keyword" content="반응형 사이트, 웹퍼블리셔, 웹접근성">
+    <meta name="keywords" content="반응형 사이트, 웹 퍼블리셔, 웹 접근성">
     <title>반응형 사이트 만들기</title>
 
-    <!-- css Style -->
-    <!--영문폰트-->
+    <!-- CSS style -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
-    <!--한글폰트-->
+    <link rel="stylesheet" href="assets/css/slick.css">
 
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 
-    <!-- Webfonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Oswald:wght@200;400&family=Staatliches&display=swap"
-        rel="stylesheet">
-    <!-- favicon -->
+    <!-- 파비콘 연동 -->
     <link rel="shortcut icon" href="assets/icon/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="assets/icon/favicon-152.png">
-    <link rel="icon" href="assets/path/to/favicon.png">
-    <link rel="icon" href="assets/icon/favicon-16.png" sizes="16x16">
-    <link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
-    <link rel="icon" href="assets/icon/favicon-48.png" sizes="48x48">
-    <link rel="icon" href="assets/icon/favicon-64.png" sizes="64x64">
-    <link rel="icon" href="assets/icon/favicon-128.png" sizes="128x128">
+    <link rel="apple-touch-icon-precomposed" href="icon/favicon-152.png">
+    <link rel="icon" href="assets/icon/favicon.png">
+    <link rel="icon" href="icon/favicon-16.png" sizes="16x16"> 
+    <link rel="icon" href="icon/favicon-32.png" sizes="32x32"> 
+    <link rel="icon" href="icon/favicon-48.png" sizes="48x48"> 
+    <link rel="icon" href="icon/favicon-64.png" sizes="64x64"> 
+    <link rel="icon" href="icon/favicon-128.png" sizes="128x128">
 
-    <!-- HTML5shiv ie6~8까지 지원 죽은소스 하단거 조건식 주소 -->
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <!-- HTML5shiv ie6~8 -->
     <!--[if lt IE 9]> 
         <script src="js/html5shiv.min.js"></script>
         <script type="text/javascript">
             alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
         </script>
-    <![endif]-->
+    <![endif]-->   
+    <style>
+    </style>
 </head>
-
 <body>
+
+    <!-- <header>
+        <h1>반응형 사이트</h1>
+    </header>
+    <nav>
+        <h2>반응형 사이트 전체 메뉴</h2>
+    </nav>
+    <article>
+        <h2>반응형 사이트 서브 타이틀</h2>
+    </article>
+    
+    <footer>
+        <h2>반응형 사이트 푸터</h2>
+    </footer> -->
+
+
     <header id="header">
         <div class="container">
             <div class="row">
                 <div class="header">
                     <div class="header_menu">
-                        <a href="https://smartwebuiux.tistory.com/">Blog</a>
-                        <a href="https://smartwebuiux.tistory.com/manage">Github</a>
-                        <a href="https://kimjiwon911108.gitbook.io/javascript-jquery/">Gitbook</a>
+                        <a href="https://jscoding.tistory.com/">Blog</a>
+                        <a href="https://github.com/thldnjs/dothome1">Github</a>
+                        <a href="https://thldnjs1234.gitbook.io/">Gitbook</a>
                     </div>
-                    <!-- //header_menu-->
+                    <!-- //header_menu -->
                     <div class="header_tit">
-                        <h1>Professional Web Publisher</h1> <br>
-                        <a href="kimjiwon911108.dothome.co.kr">kimjiwon911108.dothome.co.kr</a>
-                    </div>
-                    <!-- //header_tit-->
+                        <h1>Professional Web Publisher</h1><br>
+                        <a href="http://thldnjs.dothome.co.kr/">soewon.co.kr</a>
+                    </div> <!-- //header_tit -->
+                    
                     <div class="header_icon">
                         <ul>
-                            <li><a href="#"><i class="fa fa-css3" aria-hidden="true"></i><span>Css3</span></a></li>
-                            <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i><span>Github</span></a></li>
-                            <li><a href="#"><i class="fa fa-smile-o" aria-hidden="true"></i><span>Youtube</span></a></li>
-                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                            <li>
+                                <a href="#"><i class="fa fa-css3" aria-hidden="true"></i><span>CSS3</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i><span>facebook</span></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><span>instagram</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i><span>youtube</span></a>
                             </li>
                         </ul>
                     </div>
-                    <!-- //header_icon-->
-            </div>
+                     <!-- //header_icon -->
+                </div>
             </div>
         </div>
     </header>
-
+    <!-- content_nav -->
     <nav id="nav">
-        <h2 class="ir_so">반응형사이트 전체메뉴</h2>
+        <h2 class="ir_so">반응형 사이트 전체 메뉴</h2>
         <div class="container">
             <div class="row">
                 <div class="nav">
                     <div>
-                        <h3>HTML REFERENCE</h3>
+                        <h3>HTML Reference</h3>
                         <ol>
-                            <li><a href="#">HTML 태그(Tag)</a></li>
-                            <li><a href="#">div</a></li>
-                            <li><a href="#">ul</a></li>
-                            <li><a href="#">p</a></li>
-                            <li><a href="#">a</a></li>
-                            <li><a href="#">h1</a></li>
-                            <li><a href="#">span</a></li>
-                            <li><a href="#">em</a></li>
-                            <li><a href="#">figure</a></li>
-                            <li><a href="#">i</a></li>
-                            <li><a href="#">body</a></li>
-                            <li><a href="#">header</a></li>
-                            <li><a href="#">section</a></li>
-                            <li><a href="#">tr</a></li>
+                            <li><a href="#">&lt;caption&gt;</a></li>
+                            <li><a href="#">&lt;i&gt;</a></li>
+                            <li><a href="#">&lt;em&gt;</a></li>
+                            <li><a href="#">&lt;div&gt;</a></li>
+                            <li><a href="#">&lt;div&gt;</a></li>
+                            <li><a href="#">&lt;table&gt;</a></li>
+                            <li><a href="#">&lt;class&gt;</a></li>
+                            <li><a href="#">&lt;aside&gt;</a></li>
+                            <li><a href="#">&lt;br&gt;</a></li>
+                            <li><a href="#">&lt;col&gt;</a></li>
+                            <li><a href="#">&lt;figure&gt;</a></li>
+                            <li><a href="#">&lt;html&gt;</a></li>
+                            <li><a href="#">&lt;main&gt;</a></li>
+                            <li><a href="#">&lt;q&gt;</a></li>
                         </ol>
                     </div>
                     <div>
-                        <h3>CSS REFERENCE</h3>
+                        <h3>CSS Reference</h3>
                         <ol>
-                            <li><a href="#">em</a></li>
-                            <li><a href="#">rem</a></li>
-                            <li><a href="#">color</a></li>
-                            <li><a href="#">background</a></li>
-                            <li><a href="#">position</a></li>
-                            <li><a href="#">z-index</a></li>
-                            <li><a href="#">overflow</a></li>
-                            <li><a href="#">clear</a></li>
-                            <li><a href="#">text-aline</a></li>
-                            <li><a href="#">margin</a></li>
-                            <li><a href="#">padding</a></li>
-                            <li><a href="#">font</a></li>
-                            <li><a href="#">box-sizing</a></li>
-                            <li><a href="#">line-height</a></li>
+                            <li><a href="#">&lt;box-shadow&gt;</a></li>
+                            <li><a href="#">&lt;background&gt;</a></li>
+                            <li><a href="#">&lt;background-img&gt;</a></li>
+                            <li><a href="#">&lt;color&gt;</a></li>
+                            <li><a href="#">&lt;margin&gt;</a></li>
+                            <li><a href="#">&lt;padding&gt;</a></li>
+                            <li><a href="#">&lt;border&gt;</a></li>
+                            <li><a href="#">&lt;height&gt;</a></li>
+                            <li><a href="#">&lt;font-family&gt;</a></li>
+                            <li><a href="#">&lt;font-size&gt;</a></li>
+                            <li><a href="#">&lt;height&gt;</a></li>
+                            <li><a href="#">&lt;width&gt;</a></li>
+                            <li><a href="#">&lt;word-spacing&gt;</a></li>
+                            <li><a href="#">&lt;letter-spacing&gt;</a></li>
                         </ol>
                     </div>
                     <div>
-                        <h3>JQuery REFERENCE</h3>
+                        <h3>jQuery Reference</h3>
                         <ol>
-                            <li><a href="#">show</a></li>
-                            <li><a href="#">hide</a></li>
-                            <li><a href="#">attr</a></li>
-                            <li><a href="#">removeClass</a></li>
-                            <li><a href="#">add Class</a></li>
-                            <li><a href="#">has Class</a></li>
-                            <li><a href="#">Toggle Class</a></li>
+                            <li><a href="#">&lt;text()&gt;</a></li>
+                            <li><a href="#">&lt;메서드&gt;</a></li>
+                            <li><a href="#">&lt;hide()&gt;</a></li>
+                            <li><a href="#">&lt;toggle()&gt;</a></li>
+                            <li><a href="#">&lt;eq()&gt;</a></li>
+                            <li><a href="#">&lt;lt()&gt;</a></li>
+                            <li><a href="#">&lt;find()&gt;</a></li>
+                            <li><a href="#">&lt;offset()&gt;</a></li>
+                            <li><a href="#">&lt;position()&gt;</a></li>
                         </ol>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-
-    <article id="container">
-        <div class="title">
-            <div class="title">
-                <h2>"나는 퍼블리셔다"</h2>
+    <!-- //content_nav -->
+    <!-- content_title -->
+    <article id="title">
+        <div class="container">
+            <div class="tit">
+                <h2>"나는 퍼블리셔다!"</h2>
                 <a href="#" class="btn">
-                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    <span class="ir_so">전체메뉴 보기</span>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <span class="ir_so">전체메뉴보기</span>
                 </a>
             </div>
         </div>
     </article>
-
+    <!-- 메인 컨텐츠 -->
     <main>
         <section id="contents">
             <div class="container">
                 <h2 class="ir_so">반응형 사이트 컨텐츠</h2>
                 <section id="cont_left">
                     <h3 class="ir_so">반응형 사이트 왼쪽 컨텐츠</h3>
-                    <article class="column col1">
+                    <article class="columm col1">
                         <h4 class="col_tit">Menu</h4>
-                        <p class="col_desc">Box-shadow를 이용한 마우스 오버 효과입니다</p>
-                        <!-- 메뉴-->
+                        <p class="col_desc">Box-shadow를 이용한 마우스 오버 효과입니다.</p>
+                        <!-- 메뉴 -->
                         <div class="menu">
                             <ul>
-                                <li><a href="#">cafe<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                <li><a href="#">Github<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                <li><a href="#">Gitbook<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                <li><a href="#">Tistory<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                <li><a href="#">CSS3<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                <li><a href="#">HTML5<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                                <li><a href="#">Cafe <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                                <li><a href="#">Github <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                                <li><a href="#">Gitbook <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                                <li><a href="#">Tistory <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                                <li><a href="#">CSS3 <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                                <li><a href="#">HTML5 <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                         <!-- //메뉴 -->
                     </article>
-                    <article class="column col2">
-                        <h4 class="col_tit">Notice1</h4>
-                        <p class="col_desc">게시판 영역의 한줄 효과와 두줄 효과 게시판입니다</p>
-                        <!-- 게시판 : 한줄효과-->
+                    <article class="columm col2">
+                        <h4 class="col_tit">Notice</h4>
+                        <p class="col_desc">게시판 영역의 한줄 효과와 두줄 효과 게시판입니다.</p>
+                        <!-- 게시판: 한줄 효과 -->
                         <div class="notice1">
                             <h5>Notice1</h5>
-                            <!-- ul>li*4>a[href="#"]^^a[href="#"]{more} -->
                             <ul>
-                                <li><a href="#">여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다</a></li>
-                                <li><a href="#">여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다</a></li>
-                                <li><a href="#">여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다</a></li>
-                                <li><a href="#">여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다.여기는 한 줄 효과입니다</a></li>
+                                <li><a href="#">여기는 한줄 효과입니다. 여기는 한줄 효과입니다. 여기는 한줄 효과입니다. 여기는 한줄 효과입니다.</a></li>
+                                <li><a href="#">여기는 한줄 효과입니다. 여기는 한줄 효과입니다. 여기는 한줄 효과입니다. 여기는 한줄 효과입니다.</a></li>
+                                <li><a href="#">여기는 한줄 효과입니다. 여기는 한줄 효과입니다. 여기는 한줄 효과입니다. 여기는 한줄 효과입니다.</a></li>
+                                <li><a href="#">여기는 한줄 효과입니다. 여기는 한줄 효과입니다. 여기는 한줄 효과입니다. 여기는 한줄 효과입니다.</a></li>
                             </ul>
                             <a href="#" class="more" title="더보기">more<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
                         </div>
-                        <!-- //게시판 : 한줄효과 -->
-                        <!-- 게시판 : 두줄효과-->
+                        <!-- //게시판 -->
+                        <!-- 게시판: 두줄 효과 -->
                         <div class="notice2">
                             <h5>Notice2</h5>
-                            <!-- ul>li*4>a[href="#"]^^a[href="#"]{more} -->
                             <ul>
-                                <li><a href="#">여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다 두 줄 효과입니다.여기는 두 줄 효과입니다</a></li>
-                                <li><a href="#">여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다 두 줄 효과입니다.여기는 두 줄 효과입니다</a></li>
-                                <li><a href="#">여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다 두 줄 효과입니다.여기는 두 줄 효과입니다</a></li>
-                                <li><a href="#">여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다.여기는 두 줄 효과입니다 두 줄 효과입니다.여기는 두 줄 효과입니다</a></li>
+                                <li><a href="#">여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다.</a></li>
+                                <li><a href="#">여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다.</a></li>
+                                <li><a href="#">여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다.</a></li>
+                                <li><a href="#">여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다. 여기는 두줄 효과입니다.</a></li>
                             </ul>
                             <a href="#" class="more" title="더보기">more<i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
-                        </div>
-                        </div>
-                        <!-- //게시판 : 두줄효과 -->
+                        </div> 
+                        <!-- //게시판 -->
                     </article>
-                    <article class="column col3">
-                        <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이곳은 타이틀 영역입니다타이틀과 관련된 부분입니다</p>
-                        <!-- -->
-                        <!-- // -->
+                    <article class="columm col3">
+                        <h4 class="col_tit">Blog</h4>
+                        <p class="col_desc">해상도에 따라 이미지를 다르게 표현하는 방법입니다.</p>
+                        <!-- blog1 -->
+                        <div class="blog1">
+                            <h5 class="ir_so">image1</h5>
+                            <figure>
+                                <img src="assets/img/blog3_@1.jpg" srcset="assets/img/blog3_@ 1x.jpg, assets/img/blog3_@ 2x.jpg, assets/img/blog3_@ 3x.jpg" alt="이미지">
+                                <figcaption>반응형 웹 사이트 이미지 글입니다.반응형 웹 사이트 이미지 글입니다.반응형 웹 사이트 이미지 글입니다</figcaption>
+                            </figure>
+                        </div>
+                        <!-- //blog1 -->
+
+                        <!-- blog2 -->
+                        <div class="blog2">
+                            <h5 class="blog2"></h5>
+                            <div class="img-retina">
+                                <h5>image2</h5>
+                            </div>
+                            <p>반응형 웹 사이트 이미지 글입니다.반응형 웹 사이트 이미지 글입니다.반응형 웹 사이트 이미지 글입니다</p>
+                        </div>
+                        <!-- //blog2 -->
                     </article>
                 </section>
                 <section id="cont_center">
                     <h3 class="ir_so">반응형 사이트 가운데 컨텐츠</h3>
-                    <article class="column col4">
+                    <article class="columm col4">
+                        <h4 class="col_tit">Slick Slider</h4>
+                        <p class="col_desc">slick.js를 이용한 이미지 슬라이드 효과입니다.</p>
+                        <!-- 이미지 슬라이드 -->
+                        <div class="slider">
+                            <figure>
+                                <div><img src="assets/img/slider001.jpg" alt="이미지1"></div>
+                                <figcaption>
+                                    <em>Responsive Site1</em>
+                                    <span>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드입니다.</span></figcaption>
+                            </figure>                          
+                            <div>
+                                <figure>
+                                    <div><img src="assets/img/slider001.jpg" alt="이미지2"></div>
+                                    <figcaption>
+                                        <em>Responsive Site2</em>
+                                        <span>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드입니다.</span></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <div><img src="assets/img/slider001.jpg" alt="이미지3"></div>
+                                    <figcaption>
+                                        <em>Responsive Site3</em>
+                                        <span>슬라이드 플러그인을 이용한 반응형 이미지 슬라이드입니다.</span></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- //이미지 슬라이드 -->
+                    </article>
+                    <article class="columm col5">
                         <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이곳은 타이틀 영역입니다타이틀과 관련된 부분입니다</p>
-                        <!-- -->
+                        <p class="col_desc">이 곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
                         <!-- // -->
                     </article>
-                    <article class="column col5">
+                    <article class="columm col6">
                         <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이곳은 타이틀 영역입니다</p>
-                        <!-- -->
-                        <!-- // -->
-                    </article>
-                    <article class="column col6">
-                        <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이곳은 타이틀 영역입니다</p>
-                        <!-- -->
+                        <p class="col_desc">이 곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
                         <!-- // -->
                     </article>
                 </section>
                 <section id="cont_right">
                     <h3 class="ir_so">반응형 사이트 오른쪽 컨텐츠</h3>
-                    <article class="column col7">
+                    <article class="columm col7">
                         <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이곳은 타이틀 영역입니다</p>
-                        <!-- -->
+                        <p class="col_desc">이 곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.이 곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다</p>
+                        <!--  -->
                         <!-- // -->
                     </article>
-                    <article class="column col8">
+                    <article class="columm col8">
                         <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이곳은 타이틀 영역입니다</p>
-                        <!-- -->
+                        <p class="col_desc">이 곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.이 곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다</p>
+                        <!--  -->
                         <!-- // -->
                     </article>
-                    <article class="column col9">
+                    <article class="columm col9">
                         <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이곳은 타이틀 영역입니다</p>
-                        <!-- -->
+                        <p class="col_desc">이 곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.이 곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다</p>
+                        <!--  -->
                         <!-- // -->
                     </article>
                 </section>
-
             </div>
         </section>
     </main>
@@ -254,13 +316,20 @@
         <div class="container">
             <div class="row">
                 <h2>반응형 사이트 푸터</h2>
-            </div>        
+            </div>
         </div>
     </footer>
-
-
-    <!-- javascript Libraries -->
+    <!-- //content_title -->
+    <!-- Javascript Libraries-->
     <script src="assets/js/jquery.min_1.12.4.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script>
+        $(".slider").slick({
+            autoplay:true,
+            autoplaySpeed: 2000,
+            dots : true,
+            arrows:true
+        });
+    </script>
 </body>
-
 </html>
