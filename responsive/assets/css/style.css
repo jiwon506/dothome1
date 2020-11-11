@@ -94,7 +94,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
 
 /* 타이틀 */
  .tit {position: relative; text-align: center;}
-.tit h2 {font-family: "Nanum Brush Script"; font-size: 39px; color: #0093bd; padding: 5px 0;}
+.tit h2 {font-family: 'Jal_Onuel'; font-size: 39px; color: #0093bd; padding: 5px 0;}
 .tit .btn {
     position: absolute; right: 0; top: 5px;
     width: 60px; height: 60px;
