@@ -34,5 +34,8 @@ video,img {width: 100%;}
 .clearfix:before, .clearfix:after {display: block; content: '';line-height: 0;}
 .clearfix:after {clear: both;}
 
+/* 로우영역 */
+.row {padding: 0 24px;}
+
 
 
