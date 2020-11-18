@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="jiwon">
+    <meta name="author" content="soewon">
     <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
     <meta name="keywords"
         content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
-    <title>jiwon | Jquery Animation</title>
+    <title>soewon | Jquery Animation</title>
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/docs.min.css" rel="stylesheet">
@@ -24,15 +24,15 @@
     <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
     <!-- Facebook meta tags -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="김지원" />
+    <meta property="og:title" content="장쇠원" />
     <meta property="og:url" content="http://thldnjs.dothome.co.kr/" />
     <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
-    <meta property="og:site_name" content="김지원" />
+    <meta property="og:site_name" content="장쇠원" />
     <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
     <!-- twitter meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@jiwon" />
-    <meta name="twitter:title" content="김지원" />
+    <meta name="twitter:site" content="@soewon" />
+    <meta name="twitter:title" content="장쇠원" />
     <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
     <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
     <!-- 웹 폰트 -->
@@ -59,7 +59,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../index.html" class="navbar-brand">jiwon &lt;/doc&gt;</a>
+                <a href="../index.html" class="navbar-brand">soewon &lt;/doc&gt;</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
                 <ul class="nav navbar-nav">
@@ -67,7 +67,7 @@
                     <li><a href="https://codepen.io/thldnjs">codepen</a></li>
                     <li><a href="https://app.gitbook.com/@thldnjs1234/s/javascript-jquery/">gitbook</a></li>
                     <li><a href="https://wess.tistory.com/">github</a></li>
-                    <li><a href="https://www.figma.com/files/user/877429528690945463/%EA%B9%80%EC%A7%80%EC%9B%90/settings">figma</a></li>
+                    <li><a href="https://www.figma.com/@thldnjs1234">figma</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,7 +75,7 @@
     <div class="bs-header bgs5" id="content">
         <div class="container">
             <h1>Jquery Animation Reference v1.0 &lt;/doc&gt;</h1>
-            <p><a href="kjw911108.dothome.co.kr" target="_blank">kjw911108.dothome.co.kr</a></p>
+            <p><a href="https://thldnjs.dothome.co.kr/" target="_blank">thldnjs.dothome.co.kr</a></p>
         </div>
     </div>
     <div class="container bs-docs-container">
@@ -86,13 +86,14 @@
             $("selector").animate(properties, duration, easing, collback);
         </p>
         <div class="row">
-            <!-- <div class="col-md-12" role="main">
+            <div class="col-md-12" role="main">
+                <!-- 배너 광고 -->
                 <script src="https://ads-partners.coupang.com/g.js"></script>
                 <script>
                     new PartnersCoupang.G({
                         id: 347683
                     });
-                </script> -->
+                </script>
                 <!-- //배너 광고 -->
                 
                 <!-- Intro0 -->
@@ -116,7 +117,7 @@
                                 <td>선택한 요소를 보여줍니다.</td>
                             </tr>
                             <tr>
-                                <td>.toggle() <span style="color:red">:♥:</span></td>
+                                <td>.toggle() <span style="color:red">♥</span></td>
                                 <td>선택한 요소를 숨김/보여줍니다.</td>
                             </tr>
                             <tr>
@@ -151,7 +152,7 @@
                             </tr>
                             <tr>
                                 <td class="ce va" rowspan="7">custom</td>
-                                <td>.animate() <span style="color:red">:♥:</span></td>
+                                <td>.animate() <span style="color:red">♥</span></td>
                                 <td>선택한 요소에 애니메이션을 적용합니다.</td>
                             </tr>
                             <tr>
@@ -183,7 +184,7 @@
                 </div>
                 <!-- //Intro0 -->
                 <style>
-                    .timing {height: 360px;}
+                    .timing {height: 360px; overflow: hidden;}
                     .timing > div {
                         width: 80px; height: 80px;
                         border-radius: 50%;
@@ -324,18 +325,17 @@ $(".timing.bg3 > div").eq(3).delay(400).animate({left: leftWidth}, 1000, "easeIn
                             <div class="animation07"><span>07</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-js"><code>$(".timing.bg3 > div").eq(0).delay(100).animate({left: leftWidth}, 1000, "easeInCubic").animate({left: 0},500);
-$(".timing.bg3 > div").eq(1).delay(200).animate({left: leftWidth}, 1000, "easeInCubic").animate({left: 0},500);
-$(".timing.bg3 > div").eq(2).delay(300).animate({left: leftWidth}, 1000, "easeInCubic").animate({left: 0},500);
-$(".timing.bg3 > div").eq(3).delay(400).animate({left: leftWidth}, 1000, "easeInCubic").animate({left: 0},500);
+<pre class="line-numbers language-js"><code>$("#intro4 > button").eq(3).click(function(){
+$(".animation07").animate({top:"+=5%", borderRadius: "-=5%"}, "slow","easeInOutQuart");
+});
 </code></pre>
                 </div>
                 <!-- //Intro4 -->
-             
+
                  <!-- Intro5 -->
                  <div class="bs-docs-section">
                     <h2 id="intro5" class="page-header">
-                        Animation05 - 무한애니메이션
+                        Animation05 - 무한 애니메이션
                         <button type="button" class="btn btn-warning">start</button>
                     </h2>
                     <div class="sample">
@@ -344,22 +344,17 @@ $(".timing.bg3 > div").eq(3).delay(400).animate({left: leftWidth}, 1000, "easeIn
                             <div class="animation08"><span>08</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-js"><code>$("#intro5 > button").click(function(){
-    loop();
-});
-function loop(){
-    $(".animation08")
-    .animate ({left: leftWidth},"fast")
-    .animate ({top: leftHeight},"fast")
-    .animate ({left: "0"},"fast")
-    .animate ({top: "0"},"fast",loop)
-}
+<pre class="line-numbers language-js"><code>$(".animation08")
+.animate ({left: leftWidth},"fast")
+.animate ({top: leftHeight},"fast")
+.animate ({left: "0"},"fast")
+.animate ({top: "0"},"fast",loop)
 </code></pre>
                 </div>
                 <!-- //Intro5 -->
 
-                 <!-- Intro6 -->
-                 <div class="bs-docs-section">
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
                     <h2 id="intro6" class="page-header">
                         Animation06 - 일정한 시간 애니메이션
                         <button type="button" class="btn btn-warning">start</button>
@@ -370,23 +365,16 @@ function loop(){
                             <div class="animation09"><span>09</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-js"><code>$("#intro6 > button").click(function(){
-    time();
-    setInterval(time, 3000)
-});
-function time(){
-    $(".animation09")
-    .animate ({left: leftWidth},500,"easeOutQuint")
-    .animate ({top: leftHeight},500,"easeOutQuint")
-    .animate ({left: "0"},500,"easeOutQuint")
-    .animate ({top: "0"},500,"easeOutQuint")
-}
+<pre class="line-numbers language-js"><code>.animate ({left: leftWidth},500,"easeOutQuint")
+.animate ({top: leftHeight},500,"easeOutQuint")
+.animate ({left: "0"},500,"easeOutQuint")
+.animate ({top: "0"},500,"easeOutQuint")
 </code></pre>
                 </div>
                 <!-- //Intro6 -->
 
-                 <!-- Intro7 -->
-                 <div class="bs-docs-section">
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
                     <h2 id="intro7" class="page-header">
                         Animation07 - 사라지는 애니메이션
                         <button type="button" class="btn btn-warning">start</button>
@@ -397,25 +385,19 @@ function time(){
                             <div class="animation10"><span>10</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-js"><code>$("#intro7 > button").click(function(){
-    $(".animation10")
-    .animate ({left: leftWidth},500,"easeOutQuint")
-    .animate ({top: leftHeight},500,"easeOutQuint")
-    .animate ({left: "0"},500,"easeOutQuint")
-    .animate ({top: "0"},500,"easeOutQuint")
-    setTimeout(out,4000);
-});
-function out(){
-        $(".animation10").clearQueue().hide();
-    }
+<pre class="line-numbers language-js"><code>.animate ({left: leftWidth},500,"easeOutQuint")
+.animate ({top: leftHeight},500,"easeOutQuint")
+.animate ({left: "0"},500,"easeOutQuint")
+.animate ({top: "0"},500,"easeOutQuint")
+setTimeout(out,4000);
 </code></pre>
                 </div>
                 <!-- //Intro7 -->
 
-                 <!-- Intro8 -->
-                 <div class="bs-docs-section">
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
                     <h2 id="intro8" class="page-header">
-                        Animation08 - 콜백
+                        Animation08 - 사라지는 애니메이션
                         <button type="button" class="btn btn-warning">start</button>
                     </h2>
                     <div class="sample">
@@ -424,19 +406,15 @@ function out(){
                             <div class="animation11"><span>11</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-js"><code>$("#intro8 > button").click(function(){
-$(".animation11")
-    .animate ({left: leftWidth},500,"easeOutQuint")
-    .animate ({top: leftHeight},500,"easeOutQuint")
-    .animate ({left: "0"},500,"easeOutQuint")
-    .animate ({top: "0"},500,"easeOutQuint", function(){
-        $(".animation11")
-        alert("도착");
-    });
-});    
+<pre class="line-numbers language-js"><code>.animate ({left: leftWidth},500,"easeOutQuint")
+.animate ({top: leftHeight},500,"easeOutQuint")
+.animate ({left: "0"},500,"easeOutQuint")
+.animate ({top: "0"},500,"easeOutQuint", function(){
+    $(".animation11")
+    alert("도착");
 </code></pre>
                 </div>
-                <!-- //Intro8 -->
+                <!-- //Intro9 -->
             </div>
             <!-- //col-md-12 -->
     
@@ -479,7 +457,7 @@ $(".animation11")
         });
 
         $("#intro3 > button").click(function(){
-            $(".tiㄴming.bg3 > div").eq(0).delay(100).animate({left: leftWidth}, 1000, "easeInCubic").animate({left: 0},500);
+            $(".timing.bg3 > div").eq(0).delay(100).animate({left: leftWidth}, 1000, "easeInCubic").animate({left: 0},500);
             $(".timing.bg3 > div").eq(1).delay(200).animate({left: leftWidth}, 1000, "easeInCubic").animate({left: 0},500);
             $(".timing.bg3 > div").eq(2).delay(300).animate({left: leftWidth}, 1000, "easeInCubic").animate({left: 0},500);
             $(".timing.bg3 > div").eq(3).delay(400).animate({left: leftWidth}, 1000, "easeInCubic").animate({left: 0},500);
@@ -488,14 +466,17 @@ $(".animation11")
         $("#intro4 > button").eq(0).click(function(){
             $(".animation07").animate({left:"+=5%", width: "+=10", height: "+=10"}, "slow","easeInOutQuart");
         });
+
         $("#intro4 > button").eq(1).click(function(){
             $(".animation07").animate({left:"-=5%", width: "-=10", height: "-=10"}, "slow","easeInOutQuart");
         });
+
         $("#intro4 > button").eq(2).click(function(){
             $(".animation07").animate({top:"-=5%", borderRadius: "+=5%"}, "slow","easeInOutQuart");
         });
+
         $("#intro4 > button").eq(3).click(function(){
-            $(".animation07").animate({top:"+=5%", borderRadius: "-=5%"}, "slow","animation09");
+            $(".animation07").animate({top:"+=5%", borderRadius: "-=5%"}, "slow","easeInOutQuart");
         });
 
         $("#intro5 > button").click(function(){
@@ -510,14 +491,15 @@ $(".animation11")
         }
 
         $("#intro6 > button").click(function(){
-            setInterval(time,3000);
+            time();
+            setInterval(time, 3000)
         });
         function time(){
             $(".animation09")
-                .animate( {left: leftWidth},500,"easeOutQuart")
-                .animate( {left: leftHeight},500,"easeOutQuart")
-                .animate( {left: "0"},500,"easeOutQuart")
-                .animate( {left: "0"},500,"easeOutQuart");
+            .animate ({left: leftWidth},500,"easeOutQuint")
+            .animate ({top: leftHeight},500,"easeOutQuint")
+            .animate ({left: "0"},500,"easeOutQuint")
+            .animate ({top: "0"},500,"easeOutQuint")
         }
 
         $("#intro7 > button").click(function(){
@@ -527,12 +509,13 @@ $(".animation11")
             .animate ({left: "0"},500,"easeOutQuint")
             .animate ({top: "0"},500,"easeOutQuint")
             setTimeout(out,4000);
-                // setInterval<->clearInterval
-                // setTimeout<->clearTimeout
-        });  
+            // setInterval <--> clearInterval
+            // setTimeOut <--> ClearTimeout
+        });
+
         function out(){
-        $(".animation10").clearQueue().hide();
-        }
+                $(".animation10").clearQueue().hide();
+            }
 
         $("#intro8 > button").click(function(){
             $(".animation11")
