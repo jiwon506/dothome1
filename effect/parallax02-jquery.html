@@ -187,7 +187,6 @@
             background-size: cover;
             background-position: 50% 0;
             left: 0;
-
         }
 
         .content-item:nth-child(1) .content-item-img {
@@ -417,16 +416,14 @@
             //     $("#section"+i+" .content-item-desc").css({transform: "translateX("+offset+"px)"});
             // }
 
-            //each
-            $(" .content-item").each(function(){
-                let offset1 = (scrollTop - $(this).offset( ).top ) * 0.1;
-                let offset2 = (scrollTop - $(this).offset( ).top ) * 0.2;
-                $(this).find(".content-item-desc").css({transform:"translateY("+ -offset2+"px)"});
-                $(this).find(".content-item-num").css({transform:"translateY("+ offset1 +"px)"});
-                $(this).find(".content-item-img").css({transform:"translateY("+ offset1 +"px)"});
-                // let offset = (scrollTop - $("#section"+i).offset().top);
-                // $("#section"+i+".content-item-desc").css({ transform :"translateX("+offset+"px)"});
-            });
+            //each문 사용
+            $(".content-item").each(function(){
+                            let offset1 = (scrollTop - $(this).offset().top) * 0.1;
+                            let offset2 = (scrollTop - $(this).offset().top) * 0.2;
+                            $(this).find(".content-item-desc").css({transform: "translateY("+ -offset2+"px)"});
+                            $(this).find(".content-item-num").css({transform: "translateY("+offset1+"px)"});
+                            $(this).find(".content-item-img").css({transform: "translateY("+offset1+"px)"});
+                        });
 
             //출력용
             $(" .scrollTop").text(scrollTop);
