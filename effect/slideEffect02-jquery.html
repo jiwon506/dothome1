@@ -119,9 +119,10 @@
             background-color: var(--color-bg);
             color: var(--color-title);
             font-family: 'Chosunilbo_myungjo';
-            background: url(img/images04@2.png);
+            background: url(img/images04@2.png) no-repeat center center;
             background-size: cover;
             font-size: 16px;
+            height: 100vh;
         }
         body::before {
             content: '';
@@ -131,39 +132,38 @@
         }
 
         .slider-wrap {
-            display: flex; align-items: center; justify-content: center; height: 100vh;
+            width: 800px; height: 480px; overflow: hidden;
+            position: absolute;
+            left: 50%; top: 50%; 
+            transform: translate(-50%,-50%);
+            z-index: 100;
          }
         .slider-img { 
-            position: relative;
-            width: 800px; height: 480px;
             overflow: hidden;
-            box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
+            width: 4000px; height: 480px;
+            position: relative;
         }
         .slider-img .slider {
+          width: 800px; height: 480px; 
+          float: left;
+        }
+        .slider-img .slider span{
             position: absolute;
-            left: 0; top: 0;       
+            left: 5px; top: 5px;
         }
-        .slider-img .slider span {
-             position: absolute;
-             left: 5px; top: 5px;
-        }
-        .slider-img .slider:nth-child(1) {z-index: 5;}
-        .slider-img .slider:nth-child(2) {z-index: 4;}
-        .slider-img .slider:nth-child(3) {z-index: 3;}
-        .slider-img .slider:nth-child(4) {z-index: 2;}
-        .slider-img .slider:nth-child(5) {z-index: 1;}
+
     </style>
 </head>
 
 <body>
     <div class="info left">
-        <h1>Slide Effect01 - jQuery</h1>
-        <p>이미지슬라이드 - 3초에 한번씩 변경하기</p>
+        <h1>Slide Effect02 - jQuery</h1>
+        <p>이미지슬라이드 - 가로로 이동하기</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="slideEffect01-jquery.html" class="active">1</a><a href="slideEffect01-jquery.html">1</a></li>
-            <li><a href="slideEffect01-jquery.html">2</a><a href="slideEffect01-jquery.htmll">2</a></li>
+            <li><a href="slideEffect01-jquery.html">1</a><a href="slideEffect01-jquery.html">1</a></li>
+            <li><a href="slideEffect01-jquery.html" class="active">2</a><a href="slideEffect01-jquery.htmll">2</a></li>
             <li><a href="slideEffect01-jquery.html">3</a><a href="slideEffect01-jquery.htmll">3</a></li>
             <li><a href="slideEffect01-jquery.html">4</a><a href="slideEffect01-jquery.htmll">4</a></li>
             <li><a href="slideEffect01-jquery.html">5</a><a href="slideEffect01-jquery.htmll">5</a></li>
@@ -193,23 +193,26 @@
         const sliderImg = $(".slider-img");
         const slider = $(".slider");
 
-        let currentIndex = 0;                  //현재 첫 번째 보이는 이미지
-        let sliderCount = slider.length; //이미지 갯수
-
-        //3초에 한번씩 함수를 실행
+        let  currentIndex = 0; 
+        let sliderCount = slider.length; 
         setInterval(function(){
-            let nextIndex = (currentIndex + 1) % sliderCount;
+        //     if(currentIndex < slider.length -1 ){
+        //         currentIndex++; //0 1 2 3 4 0
+        //     } else {
+        //         currentIndex = 0;
+        //     }
+        currentIndex < sliderCount -1 ? currentIndex++ : currentIndex = 0;
+            let sliderPosition = currentIndex * (-800) + "px";
+                                            // 0 * -800px -> 0
+                                            // 1 * -800px -> -800
+                                            // 2 * -800px -> -1600 (3번째 이미지)
+                                            // 3 * -800px -> -2400 (4번째 이미지)
+                sliderImg.animate( { left : sliderPosition }, 400);                          
 
-            slider.eq(currentIndex).fadeOut(); //첫번째 이미지를 사라지게 연출
-            slider.eq(nextIndex).fadeIn();
+            // console.log("currentIndex" + currentIndex );
+            // console.log("sliderPosition" + sliderPosition );
 
-             //currentIndex = nextIndex++;
-            currentIndex = nextIndex;
-
-            console.log("currentIndex"+currentIndex);
-            console.log("nextIndex"+nextIndex);
-        },3000);
-
+        }, 2000);
     </script>
 </body>
 
