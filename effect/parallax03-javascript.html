@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax01-javascript</title>
+    <title>Parallax03-javascript</title>
     <!--googlefont-->
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <style>
-@font-face {
-    font-family: 'DWImpactamin';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/DWImpactamin.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+        @font-face {
+            font-family: 'Chosunilbo_myungjo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
         /* reset */
         *,
@@ -83,10 +83,10 @@
         }
 
         .info li a {
-            color: #000;
+            color: #fff;
             width: 25px;
             height: 25px;
-            border: 1px dashed #000;
+            border: 1px dashed #fff;
             display: inline-block;
             border-radius: 50%;
             text-align: center;
@@ -96,8 +96,8 @@
         }
 
         .info li a.active {
-            background: #000;
-            color: #fff;
+            background: #fff;
+            color: #000;
         }
 
         @media (max-width: 800px) {
@@ -113,13 +113,15 @@
             --color-title: #fff;
             --color-sub: #999;
             --color-link: #000;
-            --color-bg: #f1f1f1;
-            --font-family:'DWImpactamin';
+            --color-bg: #111;
+            --font-font-family: 'Chosunilbo_myungjo';
             --font-lato: 'Lato', sans-serif;
             background-color: var(--color-bg);
             color: var(--color-title);
-            font-family: var(--font-family);
+            font-family: 'Chosunilbo_myungjo';
+            --aspect-ratio : 33/17;
         }
+
         #parallax-wrap h1 {
             color: var(--color-h1);
             font-family: var(--font-lato);
@@ -138,6 +140,7 @@
         .contents {
             margin: 0 auto 35vh;
             width: 100%;
+            overflow: hidden;
         }
 
         .content-item {
@@ -167,17 +170,22 @@
 
         .content-item-title-imgWrap {
             position: relative;
-            width: 100%;
-            padding-bottom: 50%;
+            --width: 100%;
+            width: var(--width);
+            /*padding-bottom:50%;*/
+            padding-bottom: calc(var(--width) / (var(--aspect-ratio)));
+            overflow: hidden;
         }
 
         .content-item-img {
-            width: 100%;
+            width: var(--width);
+            --overflow:60px;
             position: absolute;
-            top: 0;
+            top: calc(-1 * var(--overflow));
+            height: calc(100% + (3*var(--overflow)));
+            background-size: cover;
+            background-position: 50% 0;
             left: 0;
-            background: url(img/images01.png);
-            height: 100%;
         }
 
         .content-item:nth-child(1) .content-item-img {
@@ -220,6 +228,11 @@
             background-size: cover;
         }
 
+        .content-item:nth-child(9) .content-item-img {
+            background: url(img/images01.png); 
+            background-size: cover;
+        }
+
         .content-item-desc {
             font-size: 4vw;
             line-height: 1.4;
@@ -230,7 +243,6 @@
             z-index: 100;
             position: relative;
             padding-left: 10vw;
-            font-family: var(--font-family);
             /*
             z-index사용할때 position:relative랑 같이 사용해 주어야 함
             position:relative
@@ -261,75 +273,19 @@
             padding-bottom: 5px;
         }
 
-        /*한번에 나타나기*/
-        /* .contents > section {
-            opacity: 0;
-            transition: all 1s;
-            transform: translateX(-200px);
-        }
-        .contents > section.show {
-            opacity: 1;
-            transform: translateX();
-        } */
-
-        /*개별적으로 나타나기*/
-        .contents>section .content-item-num {
-            opacity: 0;
-            transform: translateY(200px);
-            transition: all 1s 0.1s cubic-bezier(0, 0.68, 0.22, 0.99);
-        }
-
-        .contents>section.show .content-item-num {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .contents>section .content-item-title {
-            opacity: 0;
-            transform: translateX(200px);
-            transition: all 1s 0.3s cubic-bezier(0, 0.68, 0.22, 0.99);
-        }
-
-        .contents>section.show .content-item-title {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .contents>section .content-item-title-imgWrap {
-            opacity: 0;
-            transform: translateY(200px);
-            transition: all 1s 0.6s cubic-bezier(0, 0.68, 0.22, 0.99);
-        }
-
-        .contents>section.show .content-item-title-imgWrap {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .contents>section .content-item-desc {
-            opacity: 0;
-            transform: translateY(200px);
-            opacity: 0;
-            transition: all 1s 0.9s cubic-bezier(0, 0.68, 0.22, 0.99);
-        }
-
-        .contents>section.show .content-item-desc {
-            opacity: 1;
-            transform: translateY(0);
-        }
     </style>
 </head>
 
 <body>
     <div class="info left">
-        <h1>Parallax Effect01 - jQuery</h1>
-        <p>패랠랙스 스크롤링 효과 - 기본</p>
+        <h1>Parallax Effect03 - javascript</h1>
+        <p>패랠랙스 스크롤링 효과 - 이질감 느끼기</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="parallax01_jquery.html">1</a><a href="parallax01_jquery.html"  class="active">1</a></li>
+            <li><a href="parallax01_jquery.html">1</a><a href="parallax01_jquery.html">1</a></li>
             <li><a href="parallax02_jquery.html">2</a><a href="parallax02_jquery.html">2</a></li>
-            <li><a href="parallax03_jquery.html">3</a><a href="parallax03_jquery.html">3</a></li>
+            <li><a href="parallax03_jquery.html">3</a><a href="parallax03_jquery.html" class="active">3</a></li>
             <li><a href="parallax04_jquery.html">4</a><a href="parallax04_jquery.html">4</a></li>
             <li><a href="parallax05_jquery.html">5</a><a href="parallax05_jquery.html">5</a></li>
             <li><a href="parallax06_jquery.html">6</a><a href="parallax06_jquery.html">6</a></li>
@@ -341,16 +297,7 @@
     </div>
     <div class="info bottom">
         <ul>
-            <li>scrollTop() : <span class="pageYOffset">0</span>px</li>
-            <li>#section1 : <span class="s1OffsetTop">0</span>px</li>
-            <li>#section2 : <span class="s2OffsetTop">0</span>px</li>
-            <li>#section3 : <span class="s3OffsetTop">0</span>px</li>
-            <li>#section4 : <span class="s4OffsetTop">0</span>px</li>
-            <li>#section5 : <span class="s5OffsetTop">0</span>px</li>
-            <li>#section6 : <span class="s6OffsetTop">0</span>px</li>
-            <li>#section7 : <span class="s7OffsetTop">0</span>px</li>
-            <li>#section8 : <span class="s8OffsetTop">0</span>px</li>
-            <li>#section9 : <span class="s9OffsetTop">0</span>px</li>
+            <li>scrollTop() : <span class="scrollTop">0</span>px</li>
         </ul>
     </div>
     <!--info-->
@@ -417,7 +364,7 @@
                 </section>
                 <section id="section8" class="content-item">
                     <span class="content-item-num">08</span>
-                    <h2 class="content-item-title">Section1</h2>
+                    <h2 class="content-item-title">Section8</h2>
                     <figure class="content-item-title-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
@@ -425,7 +372,7 @@
                 </section>
                 <section id="section9" class="content-item">
                     <span class="content-item-num">09</span>
-                    <h2 class="content-item-title">Section1</h2>
+                    <h2 class="content-item-title">Section9</h2>
                     <figure class="content-item-title-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
@@ -435,144 +382,42 @@
         </section>
     </main>
 
-  
+    <!-- script 연동 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
-        // $(window).scroll(function( ) {
-        //     const scrollTop = $(window).scrollTop() + $(window).height() / 2;
+        let pageYOffset = window.pageYOffset;
+        const scroll = () => {
+            const newPageYOffset = window.pageYOffset;
+            const different = newPageYOffset - pageYOffset;
 
-        // });
-        window.addEventListener("scroll",function(){ 
-            let pageYOffset = window.pageYOffset;
+            console.log("scrollTop :" + pageYOffset);
+            console.log("newScrollTop :" + newPageYOffset);
+            console.log("different :" + different);
+
+            let target = document.querySelectorAll(".content-item-title-imgWrap");
+            //target.style.transform = "rotate("+different+"deg)";
             
-            //출력용
-            document.querySelector(".pageYOffset").innerText = pageYOffset + screen.height/2;
-            // document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
-            // document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
-            // document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
-            // document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
-            // document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
-            // document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
-            // document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
-            // document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
-            // document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
-            
-            //출력용 글씨색
-            // if(pageYOffset > document.getElementById("section1").offsetTop){
-            //     document.querySelector(".s1OffsetTop").style.color="red";
-            // } else {
-            //     document.querySelector(".s1OffsetTop").style.color="white";
-            // }
-            // if(pageYOffset > document.getElementById("section2").offsetTop){
-            //     document.querySelector(".s2OffsetTop").style.color="red";
-            // } else {
-            //     document.querySelector(".s2OffsetTop").style.color="white";
-            // }
+            //forEach
+            // target.forEach((elem)=>{
+            //     elem.style.transform = "rotate("+different+"deg)";
+            // });
+            gsap.to(".content-item-title-imgWrap", { skewY:different*0.1 , duration:.3 , ease: Power1.ease });
+            gsap.to(".content-item-num", { skewY:different*0.1 , duration:.6 , ease: Power1.ease });
+            gsap.to(".content-item-desc", { skewX:different*0.2 , duration:.6 , ease: Power4.ease });
 
-            // if(pageYOffset > document.getElementById("section3").offsetTop){
-            //     document.querySelector(".s3OffsetTop").style.color="red";
-            // } else {
-            //     document.querySelector(".s3OffsetTop").style.color="white";
-            // }
+            pageYOffset = newPageYOffset;
 
-            // if(pageYOffset > document.getElementById("section4").offsetTop){
-            //     document.querySelector(".s4OffsetTop").style.color="red";
-            // } else {
-            //     document.querySelector(".s4OffsetTop").style.color="white";
-            // }
-
-            // if(pageYOffset > document.getElementById("section5").offsetTop){
-            //     document.querySelector(".s5OffsetTop").style.color="red";
-            // } else {
-            //     document.querySelector(".s5OffsetTop").style.color="white";
-            // }
-
-            // if(pageYOffset > document.getElementById("section6").offsetTop){
-            //     document.querySelector(".s6OffsetTop").style.color="red";
-            // } else {
-            //     document.querySelector(".s6OffsetTop").style.color="white";
-            // }
-
-            // if(pageYOffset > document.getElementById("section7").offsetTop){
-            //     document.querySelector(".s7OffsetTop").style.color="red";
-            // } else {
-            //     document.querySelector(".s7OffsetTop").style.color="white";
-            // }
-            // if(pageYOffset > document.getElementById("section8").offsetTop){
-            //     document.querySelector(".s8OffsetTop").style.color="red";
-            // } else {
-            //     document.querySelector(".s8OffsetTop").style.color="white";
-            // }
-
-            // if(pageYOffset > document.getElementById("section9").offsetTop){
-            //     document.querySelector(".s9OffsetTop").style.color="red";
-            // } else {
-            //     document.querySelector(".s9OffsetTop").style.color="white";
-            // }
-  
-                for(let i = 1; i<=9; i++){
-                //출력용 한번에 (for) innerText = textContent
-                document.querySelector(".s"+i+"OffsetTop").innerText = document.getElementById( "section"+i ).offsetTop;
-                if(pageYOffset > document.getElementById("section9").offsetTop){
-                    document.querySelector(".s9OffsetTop").style.color="red";
-                } else {
-                    document.querySelector(".s9OffsetTop").style.color="white";
-                }
-            }
-            //나타나기
-            if( pageYOffset > document.querySelector("section1").offsettop ){
-                document.querySelector("section1").classList.add("show");
-            } else{
-                document.querySelector("section1").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section2").offsettop ){
-                document.querySelector("section2").classList.add("show");
-            } else{
-                document.querySelector("section2").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section3").offsettop ){
-                document.querySelector("section3").classList.add("show");
-            } else{
-                document.querySelector("section3").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section4").offsettop ){
-                document.querySelector("section4").classList.add("show");
-            } else{
-                document.querySelector("section4").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section5").offsettop ){
-                document.querySelector("section5").classList.add("show");
-            } else{
-                document.querySelector("section5").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section6").offsettop ){
-                document.querySelector("section6").classList.add("show");
-            } else{
-                document.querySelector("section6").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section7").offsettop ){
-                document.querySelector("section7").classList.add("show");
-            } else{
-                document.querySelector("section7").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section8").offsettop ){
-                document.querySelector("section8").classList.add("show");
-            } else{
-                document.querySelector("section8").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section9").offsettop ){
-                document.querySelector("section9").classList.add("show");
-            } else{
-                document.querySelector("section9").classList.remove("show");
-            }
-            //나타나기 한번에
-            document.querySelectorAll(".content-item").forEach( (elem ) => {
-                if(pageYOffset > elem.offsetTop ){
-                    elem.classList.add("show");
-                }else{
-                    elem.classList.remove("show");
-                }
-            }); 
-        });
+            requestAnimationFrame(scroll);
+        }
+        scroll();
+        // let nun = 0;
+        // function render(){
+        //     document.querySelector(".content-item-num").innerHTML = nun;
+        //     num++;
+        //     //setInterval(render, 100);
+        //     requestAnimationFrame(render);
+        // }
+        // render();
     </script>
 </body>
 

@@ -116,18 +116,60 @@
                 </div>
                 <!-- //Intro1 -->
 
-                <!-- Intro2-->
+                <!-- Intro2 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">Parallax - JavaScript</h2>
-                    <p class="bs-callout bs-callout-info"></p>
+                    <h2 id="intro1" class="page-header">Parallax - jQuery</h2>
+                    <p class="bs-callout bs-callout-info">scrollTop과 offsetTop을 이용하여 패럴랙스 스크롤링 효과를 완성하였습니다.</p>
                     <p><a class="btn btn-primary btn-lg" href="parallax01-jquery.html" role="button">확인하기</a></p>
 
-                    <pre class="line-numbers language-css"><code>
+<pre class="line-numbers language-css"><code>$(window).scroll(function(){
+    const scrollTop = $(window).scrollTop()+ $(window).height()/2;
+    $(".scrollTop").text(parseInt(scrollTop));
 
-                    </code></pre>
+    $(".content-item").each(function(num){
+        $(".s"+(num+1)+"OffsetTop").text(parseInt($("#section"+(num+1)).offset().top));
+
+        if(scrollTop > $(this).offset().top){
+            $(".s"+(num+1)+"OffsetTop").css("color","red");
+            $(this).addClass("show")
+        } else {
+            $(".s"+(num+1)+"OffsetTop").css("color","white");
+            $(this).removeClass("show");
+        }
+    });
+});
+</code></pre>
                     
                 </div>
                 <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">Parallax - jQuery</h2>
+                    <p class="bs-callout bs-callout-info">scrollTop과 offsetTop을 이용하여 패럴랙스 스크롤링 효과를 완성하였습니다.</p>
+                    <p><a class="btn btn-primary btn-lg" href="parallax01-jquery.html" role="button">확인하기</a></p>
+
+<pre class="line-numbers language-css"><code>$(window).scroll(function(){
+    const scrollTop = $(window).scrollTop()+ $(window).height()/2;
+    $(".scrollTop").text(parseInt(scrollTop));
+
+    $(".content-item").each(function(num){
+        $(".s"+(num+1)+"OffsetTop").text(parseInt($("#section"+(num+1)).offset().top));
+
+        if(scrollTop > $(this).offset().top){
+            $(".s"+(num+1)+"OffsetTop").css("color","red");
+            $(this).addClass("show")
+        } else {
+            $(".s"+(num+1)+"OffsetTop").css("color","white");
+            $(this).removeClass("show");
+        }
+    });
+});
+</code></pre>
+                    
+                </div>
+                <!-- //Intro3 -->
+
 
                 <!-- figma -->
                 <div class="bs-docs-section">
