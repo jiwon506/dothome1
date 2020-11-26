@@ -450,7 +450,7 @@
 
     $(window).scroll(function () {
         const scrollTop = $(window).scrollTop() + $(window).height() / 2;
-        //$(".scrollTop").text(scrollTop);
+        $(".scrollTop").text(scrollTop);
         // //parseInt(scrollTop) 정수로 나오게 하는방법
         // $(".s1OffsetTop").text(parseInt($("#section1").offset().top ));
         // $(".s2OffsetTop").text(parseInt($("#section2").offset().top ));
@@ -557,13 +557,13 @@
         //     }
         // });
         //each();
-        // $(".content-item").each(function( ) {
-        //     if( scrollTop > $(this).offset().top){
-        //             $(this).addClass("show");
-        //         } else {
-        //             $(this).removeClass("show");
-        //         }
-        // });
+        $(".content-item").each(function( ) {
+            if( scrollTop > $(this).offset().top){
+                    $(this).addClass("show");
+                } else {
+                    $(this).removeClass("show");
+                }
+        });
     });
 </script>
 </body>
