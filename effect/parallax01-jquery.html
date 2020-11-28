@@ -7,7 +7,7 @@
     <title>Parallax01-jQuery</title>
     <!--googlefont-->
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <style>
         @font-face {
@@ -435,137 +435,176 @@
         </section>
     </main>
 
-<!-- script 연동 -->
-<script src="../assets/js/jquery-1.9.1.min.js"></script>
-<script>
-    //h1태그를 클릭하면 모든 글씨를 빨간색으로 변경
-    // $("h1").click(function(){
-    //     $("*").css("color","red");
-    // });
-    //h1태그를 클릭하면 클릭한 글씨를 alert으로 출력
-    // $("h1").click(function(){
-    //     let txt = $("h1").text();
-    //     alert (txt);
-    // });
+    <!-- script 연동 -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script>
+         $(window).scroll(function( ) {
+            const scrollTop = $(window).scrollTop() +$(window).height( )/ 2;
+             //출력용
+            $(".scrollTop").text(parseInt(scrollTop));
+            $(".s1OffsetTop").text( parseInt($("#section1").offset().top) );
+            $(".s2OffsetTop").text( parseInt($("#section2").offset().top) );
+            $(".s3OffsetTop").text( parseInt($("#section3").offset().top) );
+            $(".s4OffsetTop").text( parseInt($("#section4").offset().top) );
+            $(".s5OffsetTop").text( parseInt($("#section5").offset().top) );
+            $(".s6OffsetTop").text( parseInt($("#section6").offset().top) );
+            $(".s7OffsetTop").text( parseInt($("#section7").offset().top) );
+            $(".s8OffsetTop").text( parseInt($("#section8").offset().top) );
+            $(".s9OffsetTop").text( parseInt($("#section9").offset().top) );
 
-    $(window).scroll(function () {
-        const scrollTop = $(window).scrollTop() + $(window).height() / 2;
-        $(".scrollTop").text(scrollTop);
-        // //parseInt(scrollTop) 정수로 나오게 하는방법
-        // $(".s1OffsetTop").text(parseInt($("#section1").offset().top ));
-        // $(".s2OffsetTop").text(parseInt($("#section2").offset().top ));
-        // $(".s3OffsetTop").text(parseInt($("#section3").offset().top ));
-        // $(".s4OffsetTop").text(parseInt($("#section4").offset().top ));
-        // $(".s5OffsetTop").text(parseInt($("#section5").offset().top ));
-        // $(".s6OffsetTop").text(parseInt($("#section6").offset().top ));
-        // $(".s7OffsetTop").text(parseInt($("#section7").offset().top ));
-        // $(".s8OffsetTop").text(parseInt($("#section8").offset().top ));
-        // $(".s9OffsetTop").text(parseInt($("#section9").offset().top ));
+            //출력용 글씨 색
+            // if( scrollTop > ($("#section1").offset().top) ){
+            //     $(".s1OffsetTop").css("color","red");
+            // } else{
+            //     $(".s1OffsetTop").css("color","white");
+            // }
+
+            // if( scrollTop > ($("#section2").offset().top) ){
+            //     $(".s2OffsetTop").css("color","red");
+            // }else{
+            //     $(".s2OffsetTop").css("color","white");
+            // }
+
+            // if( scrollTop > ($("#section3").offset().top) ){
+            //     $(".s3OffsetTop").css("color","red");
+            // }else{
+            //     $(".s3OffsetTop").css("color","white");
+            // }
+
+            // if( scrollTop > ($("#section4").offset().top) ){
+            //     $(".s4OffsetTop").css("color","red");
+            // }else{
+            //     $(".s4OffsetTop").css("color","white");
+            // }
+
+            // if( scrollTop > ($("#section5").offset().top) ){
+            //     $(".s5OffsetTop").css("color","red");
+            // }else{
+            //     $(".s5OffsetTop").css("color","white");
+            // }
+
+            // if( scrollTop > ($("#section6").offset().top) ){
+            //     $(".s6OffsetTop").css("color","red");
+            // }else{
+            //     $(".s6OffsetTop").css("color","white");
+            // }
+
+            // if( scrollTop > ($("#section7").offset().top) ){
+            //     $(".s7OffsetTop").css("color","red");
+            // }else{
+            //     $(".s7OffsetTop").css("color","white");
+            // }
+
+            // if( scrollTop > ($("#section8").offset().top) ){
+            //     $(".s8OffsetTop").css("color","red");
+            // }else{
+            //     $(".s8OffsetTop").css("color","white");
+            // }
+
+            // if( scrollTop > ($("#section9").offset().top) ){
+            //     $(".s9OffsetTop").css("color","red");
+            // }else{
+            //     $(".s9OffsetTop").css("color","white");
+            // }
+
+            //for문
+                    $(window).scroll(function(){
+                        const scrollTop = $(window).scrollTop() +$(window).height( )/ 2;
+                        $(".scrollTop").text(parseInt(scrollTop));
+                        for(let i=1; i<=9; i++){
+                            //출력용
+                            $(".s"+i+"OffsetTop").text( parseInt($("#section"+i).offset().top) );
+                            if( scrollTop > $("#section"+i).offset().top ){
+                                $(".s"+i+"OffsetTop").css("color","red");
+                                //나타나기
+                                $("#section"+i).addClass("show");
+                            } else {
+                                $(".s"+i+"OffsetTop").css("color","white");
+                                //나타나기
+                                $("#section"+i).removeClass("show");
+                            }
+                        }
+                    });
+
+             //each()
+            $(window).scroll(function(){
+                        const scrollTop = $(window).scrollTop() +$(window).height( )/ 2;
+                        $(".scrollTop").text(parseInt(scrollTop));
+                        $(".content-item").each(function(num){
+                            $(".s"+(num+1)+"OffsetTop").text( parseInt($("#section"+(num+1)).offset().top) )
+                            if( scrollTop > $(this).offset().top ){
+                                $(".s"+(num+1)+"OffsetTop").css("color","red");
+                            } else {
+                                $(".s"+(num+1)+"OffsetTop").css("color","white");
+                            }
+                            if( scrollTop > $(this).offset().top ){
+                                 //$(this) section대신 써도됌
+                                $("#section"+(num+1)).addClass("show");
+                            } else {
+                                $("#section"+(num+1)).removeClass("show");
+                            }
+                        });
+                });
+
+            //나타나기
+            // if(scrollTop > $("#section1").offset().top){
+            //     $("#section1").addClass("show");
+            // } else{
+            //     $("#section1").removeClass("show");
+            // }
+
+            // if(scrollTop > $("#section2").offset().top){
+            //     $("#section2").addClass("show");
+            // } else{
+            //     $("#section2").removeClass("show");
+            // }
+
+            // if(scrollTop > $("#section3").offset().top){
+            //     $("#section3").addClass("show");
+            // } else{
+            //     $("#section3").removeClass("show");
+            // }
+
+            // if(scrollTop > $("#section4").offset().top){
+            //     $("#section4").addClass("show");
+            // } else{
+            //     $("#section4").removeClass("show");
+            // }
+
+            // if(scrollTop > $("#section5").offset().top){
+            //     $("#section5").addClass("show");
+            // } else{
+            //     $("#section5").removeClass("show");
+            // }
+
+            // if(scrollTop > $("#section6").offset().top){
+            //     $("#section6").addClass("show");
+            // } else{
+            //     $("#section6").removeClass("show");
+            // }
+
+            // if(scrollTop > $("#section7").offset().top){
+            //     $("#section7").addClass("show");
+            // } else{
+            //     $("#section7").removeClass("show");
+            // }
+
+            // if(scrollTop > $("#section8").offset().top){
+            //     $("#section8").addClass("show");
+            // } else{
+            //     $("#section8").removeClass("show");
+            // }
+
+            // if(scrollTop > $("#section9").offset().top){
+            //     $("#section9").addClass("show");
+            // } else{
+            //     $("#section9").removeClass("show");
+            // }
+
+         });
 
 
-        if (scrollTop > $("#section1").offset().top) {
-            $(".s1OffsetTop").css("color", "red");
-        } else {
-            $("#section1").css("color", "white");
-        };
-
-        if (scrollTop > $("#section2").offset().top) {
-            $(".s2OffsetTop").css("color", "red");
-        } else {
-            $("#section2").css("color", "white");
-        };
-
-        if (scrollTop > $("#section3").offset().top) {
-            $(".s3OffsetTop").css("color", "red");
-        } else {
-            $("#section3").css("color", "white");
-        };
-
-        if (scrollTop > $("#section4").offset().top) {
-            $(".s4OffsetTop").css("color", "red");
-        } else {
-            $("#section4").css("color", "white");
-        };
-
-        if (scrollTop > $("#section5").offset().top) {
-            $(".s5OffsetTop").css("color", "red");
-        } else {
-            $("#section5").css("color", "white");
-        };
-
-        if (scrollTop > $("#section6").offset().top) {
-            $(".s6OffsetTop").css("color", "red");
-        } else {
-            $("#section6").css("color", "white");
-        };
-
-        if (scrollTop > $("#section7").offset().top) {
-            $(".s7OffsetTop").css("color", "red");
-        } else {
-            $("#section7").css("color", "white");
-        };
-
-        if (scrollTop > $("#section8").offset().top) {
-            $(".s8OffsetTop").css("color", "red");
-        } else {
-            $("#section8").css("color", "white");
-        };
-
-        if (scrollTop > $("#section9").offset().top) {
-            $(".s9OffsetTop").css("color", "red");
-        } else {
-            $("#section9").css("color", "white");
-        };
-
-
-        //나타나기
-        //     if( scrollTop > $("#section1").offset().top ) {
-        //         $("#section1").addClass("show");
-        //     } 
-        //     if( scrollTop > $("#section2").offset().top ) {
-        //         $("#section2").addClass("show");
-        //     }
-        //     if( scrollTop > $("#section3").offset().top ) {
-        //         $("#section3").addClass("show");
-        //     }
-        //     if( scrollTop > $("#section4").offset().top ) {
-        //         $("#section4").addClass("show");
-        //     }
-        //     if( scrollTop > $("#section5").offset().top ) {
-        //         $("#section5").addClass("show");
-        //     }
-        //     if( scrollTop > $("#section6").offset().top ) {
-        //         $("#section6").addClass("show");
-        //     }
-        //     if( scrollTop > $("#section7").offset().top ) {
-        //         $("#section7").addClass("show");
-        //     }
-        //     if( scrollTop > $("#section8").offset().top ) {
-        //         $("#section8").addClass("show");
-        //     }
-        //     if( scrollTop > $("#section9").offset().top ) {
-        //         $("#section9").addClass("show");
-        //     }
-        // });
-        //for문으로 출력
-        //  for(let i = 1; i <= $(".content-item").length; i++){
-        //         if( scrollTop > $("#section"+i ).offset().top){
-        //             $("#section"+i ).addClass("show");
-        //         } else {
-        //             $("#section"+i ).removeClass("show");
-        //         }
-        //     }
-        // });
-        //each();
-        $(".content-item").each(function( ) {
-            if( scrollTop > $(this).offset().top){
-                    $(this).addClass("show");
-                } else {
-                    $(this).removeClass("show");
-                }
-        });
-    });
-</script>
+    </script>
 </body>
 
 </html>
