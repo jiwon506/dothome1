@@ -275,7 +275,6 @@
 .timing3.show {animation:move 2s 1 ease-in;}
 .timing4.show {animation:move 2s 1 ease-out;}
 .timing5.show {animation:move 2s 1 ease-in-out;}  
-
 @keyframes move {
     0% {left: 0%;}
     50% {left: calc(100% - 120px)}
@@ -308,7 +307,8 @@
                                 <div class="timing11"><span>steps(10, start)</span></div>
                             </div>
                         </div>
-<pre class="line-numbers language-css"><code>.timing6.show {animation: move 4s 1 step-start;}
+<pre class="line-numbers language-css"><code>.timing.bg2 > div {background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);}
+.timing6.show {animation: move 4s 1 step-start;}
 .timing7.show {animation: move 4s 1 step-end;}
 .timing8.show {animation: move 4s 1 steps(4, start);}
 .timing9.show {animation: move 4s 1 steps(4, end);}
@@ -387,11 +387,12 @@
                                     <div class="timing16"><span>timing16</span></div>
                                 </div>
                             </div>
-        <pre class="line-numbers language-css"><code>.timing12.show {animation: move 3s 2 cubic-bezier(0,.71,0,1);}
-        .timing13.show {animation: move 3s 2 cubic-bezier(0,.71,1,-0.28);}
-        .timing14.show {animation: move 3s 2 cubic-bezier(1,-0.52,1,-0.28);}
-        .timing15.show {animation: move 3s 2 cubic-bezier(1,.02,0,1.01);}
-        .timing16.show {animation: move 3s 2 cubic-bezier(.33,2.04,1,2.05);}
+        <pre class="line-numbers language-css"><code>.timing.bg3 > div {background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
+.timing12.show {animation: move 3s 2 cubic-bezier(0,.71,0,1);}
+.timing13.show {animation: move 3s 2 cubic-bezier(0,.71,1,-0.28);}
+.timing14.show {animation: move 3s 2 cubic-bezier(1,-0.52,1,-0.28);}
+.timing15.show {animation: move 3s 2 cubic-bezier(1,.02,0,1.01);}
+.timing16.show {animation: move 3s 2 cubic-bezier(.33,2.04,1,2.05);}
         </code></pre> 
                         </div>
                         <!-- //Intro3 -->
@@ -415,7 +416,8 @@
                                     <div class="timing20"><span>timing20</span></div>
                                 </div>
                             </div>
-<pre class="line-numbers language-css"><code>.timing17.show {animation: move 3s 0.1s 2 ease;}
+<pre class="line-numbers language-css"><code>.timing.bg4 > div {background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);}
+.timing17.show {animation: move 3s 0.1s 2 ease;}
 .timing18.show {animation: move 3s 0.2s 2 ease;}
 .timing19.show {animation: move 3s 0.3s 2 ease;}
 .timing20.show {animation: move 3s 0.4s 2 ease;}
@@ -442,7 +444,8 @@
                                     <div class="timing24"><span>timing24</span></div>
                                 </div>
                             </div>
-<pre class="line-numbers language-css"><code>.timing21.show {animation: move 1s 1 ease;}
+<pre class="line-numbers language-css"><code>.timing.bg5 > div {background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);}
+.timing21.show {animation: move 1s 1 ease;}
 .timing22.show {animation: move 1s 2 ease;}
 .timing23.show {animation: move 1s 3 ease;}
 .timing24.show {animation: move 1s infinite ease;}
@@ -485,6 +488,13 @@
 .timing25.reverse {animation: move2 4s 5 ease reverse;}
 .timing25.alternate {animation: move2 4s 5 ease alternate;}
 .timing25.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}
+@keyframes move2 {
+    0%   {left: 0; top: 0;}
+    25%  {left: calc(100% - 120px); top: 0;}
+    50%  {left: calc(100% - 120px); top: calc(100% - 120px);}
+    75%  {left: 0; top: calc(100% - 120px);}
+    100% {left: 0; top: 0;}
+}
 </code></pre> 
                 </div>
                 <!-- //Intro6 -->
@@ -516,10 +526,16 @@
                             <div class="timing29"><span>timing29</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>.timing26.show {animation: move3 3s 1 ease; animation-fill-mode: none; }
+<pre class="line-numbers language-css"><code>.timing.bg7 {height: 600px;}
+.timing.bg7 > div {background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);}
+.timing26.show {animation: move3 3s 1 ease; animation-fill-mode: none; }
 .timing27.show {animation: move3 3s 1 ease; animation-fill-mode: forwards; }
 .timing28.show {animation: move3 3s 1 ease; animation-fill-mode: backwards; }
 .timing29.show {animation: move3 3s 1 ease; animation-fill-mode: both; }
+@keyframes move3 {
+    0%{ left: 0%;}
+    100%{ right: calc(100% - 120px);}
+}
 </code></pre> 
                 </div>
                 <!-- //Intro7 -->
@@ -542,12 +558,10 @@
                             <div class="timing30"><span>timing30</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>.timing.bg6 {height: 600px;}
-.timing.bg6 > div {background-image: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);}
-.timing25.normal {animation: move2 4s 5 ease normal;}
-.timing25.reverse {animation: move2 4s 5 ease reverse;}
-.timing25.alternate {animation: move2 4s 5 ease alternate;}
-.timing25.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}
+<pre class="line-numbers language-css"><code>.timing.bg8 {height: 600px;}
+.timing.bg8 > div {background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);}
+.timing30.Running {animation: move2 4s 100 ease; animation-play-state: running; }
+.timing30.Paused {animation: move2 4s 100 ease; animation-play-state: paused; }
 </code></pre> 
                 </div>
                 <!-- //Intro8 -->
@@ -587,12 +601,15 @@
                             <div class="timing37"><span>timing37</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>.timing.bg6 {height: 600px;}
-.timing.bg6 > div {background-image: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);}
-.timing25.normal {animation: move2 4s 5 ease normal;}
-.timing25.reverse {animation: move2 4s 5 ease reverse;}
-.timing25.alternate {animation: move2 4s 5 ease alternate;}
-.timing25.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}
+<pre class="line-numbers language-css"><code>.timing.bg9 {display: flex; justify-content: space-between; min-height: 400px;}
+.timing.bg9 > div {background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);}
+.timing.bg9 > div.ani1 {animation: wobble 1s 10 ease;}
+.timing.bg9 > div.ani2 {animation: bounce 2s 10 ease;}
+.timing.bg9 > div.ani3 {animation: backInDown 2s 10 ease;}
+.timing.bg9 > div.ani4 {animation: fadeIn 2s 10 ease;}
+.timing.bg9 > div.ani5 {animation: fadeInDownBig 2s 10 ease;}
+.timing.bg9 > div.ani6 {animation: fadeInUp 2s 10 ease;}
+.timing.bg9 > div.ani7 {animation: fadeOutDown 2s 10 ease;}
 </code></pre> 
                 </div>
                 <!-- //Intro9 -->
