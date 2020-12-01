@@ -206,7 +206,7 @@
                 <!-- //Intro2 -->
                 <!-- Intro3 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro3" class="page-header">원형</h2>
+                    <h2 id="intro3" class="page-header">다각형</h2>
                     <div class="sample">
                         <h3><span></span><em class="sr-only">svg</em></h3>
                         <div class="svgBox svg3">
@@ -391,8 +391,27 @@
                             </svg>
                         </div>
                     </div>
-                <pre class="line-numbers language-html"><code>
-                </code></pre>
+<pre class="line-numbers language-html"><code>&lt;div class="svgBox svg1"&gt; 
+&lt;svg style="background: #E3F3FD"&gt; 
+    &lt;line x1="0" y1="0" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none"/&gt; 
+&lt;/svg&gt; 
+&lt;svg style="background: #E3F3FD"&gt; 
+    &lt;line x1="50" y1="50" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" /&gt; 
+&lt;/svg&gt; 
+&lt;svg style="background: #E3F3FD"&gt; 
+    &lt;line x1="100" y1="100" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" /&gt; 
+&lt;/svg&gt; 
+&lt;svg style="background: #E3F3FD"&gt; 
+    &lt;polyline points="21,17.2 21,139.2 117,52.2"  stroke="#0D47A1" stroke-width="2" fill="none" /&gt; 
+&lt;/svg&gt; 
+&lt;svg style="background: #E3F3FD"&gt; 
+    &lt;polyline points="21,17.2 21,139.2 122,28.2 141,139.2"  stroke="#0D47A1" stroke-width="2" fill="none" /&gt; 
+&lt;/svg&gt; 
+&lt;svg style="background: #E3F3FD"&gt; 
+    &lt;polyline points="21,17.2 21,139.2 122,28.2 141,139.2 23.5,11.7"  stroke="#0D47A1" stroke-width="2" fill="none" /&gt; 
+&lt;/svg&gt; 
+&lt;/div&gt; 
+</code></pre>
                 </div>
                 <!-- //Intro5 -->
                 <!-- Intro6 -->
@@ -433,7 +452,38 @@
                             </svg>
                         </div>
                     </div>
-<pre class="line-numbers language-html"><code>
+<pre class="line-numbers language-html"><code>&lt;div class="svgBox svg3"&gt; 
+    &lt;svg&gt; 
+        &lt;image xlink:href="images/frame.png" width="160" height="160" /&gt; 
+    &lt;/svg&gt; 
+    &lt;svg&gt; 
+        &lt;image xlink:href="images/frame.png" width="160" height="160" clip-path="circle(60px at center)" /&gt; 
+    &lt;/svg&gt; 
+    &lt;svg&gt; 
+        &lt;clipPath id="clipPath1"&gt; 
+            &lt;polygon points="136,141 10,101 108,12"/&gt; 
+        &lt;/clipPath&gt; 
+        &lt;image xlink:href="images/frame.png" width="160" height="160" clip-path="url(#clipPath1)" /&gt; 
+    &lt;/svg&gt; 
+    &lt;svg&gt; 
+        &lt;clipPath id="clipPath2"&gt; 
+            &lt;polygon points="121,131 56,140 15,89 39,27 104,18 145,70" /&gt; 
+        &lt;/clipPath&gt; 
+        &lt;image xlink:href="images/frame.png" width="160" height="160" clip-path="url(#clipPath2)" /&gt; 
+    &lt;/svg&gt; 
+    &lt;svg&gt; 
+        &lt;clipPath id="clipPath3"&gt; 
+            &lt;polygon points="115,134 71,144 30,124 12,82 26,39 64,14 108,20 139,53 142,98" /&gt; 
+        &lt;/clipPath&gt; 
+        &lt;image xlink:href="images/frame.png" width="160" height="160" clip-path="url(#clipPath3)" /&gt; 
+    &lt;/svg&gt; 
+    &lt;svg&gt; 
+        &lt;clipPath id="clipPath4"&gt; 
+            &lt;polygon points="133,129 87,115 50,144 49,96 9,70 54,54 67,8 96,47 144,45 116,84" /&gt; 
+        &lt;/clipPath&gt; 
+        &lt;image xlink:href="images/frame.png" width="160" height="160" clip-path="url(#clipPath4)" /&gt; 
+    &lt;/svg&gt; 
+&lt;/div&gt; 
 </code></pre>
                 </div>
                 <!-- //Intro6 -->
@@ -498,7 +548,34 @@
                             </div>
                         </div>
                     </div>
-<pre class="line-numbers language-html"><code>
+<pre class="line-numbers language-html"><code>&lt;div class="svgBox svg7"&gt; 
+    &lt;svg&gt; 
+        &lt;pattern id="pattern1" patternunites="useSpaceOuUse" width="100%" height="100%"&gt; 
+            &lt;image xlink:href="images/frame.png" width="160" height="160" clip-path="url(#clipPath3)" /&gt; 
+        &lt;/pattern&gt; 
+        &lt;text fill="#F48FB1" x="7" y="110" font-family=" S-CoreDream-8Heavy" font-size="70" font-weight="900"&gt; SVG&lt; /text&gt; 
+    &lt;/svg&gt; 
+    &lt;svg&gt; 
+        &lt;pattern id="pattern1" patternunites="useSpaceOuUse" width="100%" height="100%"&gt; 
+            &lt;image xlink:href="images/frame.png" width="160"  clip-path="url(#clipPath3)"  /&gt; 
+        &lt;/pattern&gt; 
+        &lt;text fill="url(#pattern1)" x="7" y="110" font-family=" S-CoreDream-8Heavy" font-size="70" font-weight="900"&gt; SVG&lt; /text&gt; 
+    &lt;/svg&gt; 
+&lt;/div&gt; 
+</code></pre>
+<pre class="line-numbers language-css"><code>.text-clip.c2{
+background-image: url(images/frame.png); background-size: cover;
+-webkit-text-fill-color:transparent; -webkit-background-clip: text;
+}
+.text-clip.c3{
+background-image: linear-gradient(60deg, #ff5858,#f09819); background-size: cover;
+-webkit-text-fill-color:transparent; -webkit-background-clip: text;
+}
+.text-clip.c4{
+-webkit-text-fill-color:transparent; -webkit-background-clip: text;
+-webkit-text-stroke: 2px #0d47a1
+}
+.svg7{display: flex;}
 </code></pre>
                 </div>
                 <!-- //Intro7 -->
@@ -508,7 +585,7 @@
                         width: 160px; height: 160px; 
                         background: #ffebee;
                         margin: 6px;
-                     }
+                    }
                     .ani1 {
                         width: 100px; height: 100px;
                         x: 30px; y: 30px;
@@ -577,7 +654,7 @@
                 </style>
                 <!-- Intro8 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro8" class="page-header">애니메이션(Animation)))</h2>
+                    <h2 id="intro8" class="page-header">애니메이션(Animation)</h2>
                     <div class="sample">
                         <h3><span></span><em class="sr-only">SVG</em></h3>
                         <div class="svgBox svg8">
@@ -610,9 +687,103 @@
                         </svg>
                     </div>
                 </div>
-                <!-- //Intro8 -->
-            </div>
-            <!-- //col-md-12 -->
+<pre class="line-numbers language-css"><code>.ani1{
+    width: 100px; height: 100px;
+    x: 30px; y: 30px;
+    fill: none;
+    stroke: #880c41;
+    stroke-width: 5px;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: ani1 1s infinite linear alternate-reverse;
+}
+@keyframes ani1{
+    0%   {stroke-dashoffset: 50;}
+    100% {stroke-dashoffset: 0;}
+}
+.ani2{
+    width: 100px; height: 100px;
+    x: 30px; y: 30px;
+    fill: none;
+    stroke: #880c41;
+    stroke-width: 5px;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: ani2 2s infinite linear alternate-reverse;
+}
+@keyframes ani2{
+    0%   {stroke-dashoffset: 400;}
+    100% {stroke-dashoffset: 0;}
+}
+.ani3{
+    stroke-dasharray: 230px;
+    stroke-dashoffset: 230px;
+    animation: ani3 1s infinite linear alternate-reverse;
+}
+@keyframes ani3{
+    0%   {stroke-dashoffset: 230px;}
+    100% {stroke-dashoffset: 0;}
+}
+.ani4{
+    stroke-dasharray: 700px;
+    stroke-dashoffset: 605px;
+    animation: ani4 1s infinite linear alternate-reverse;
+}
+@keyframes ani4{
+    0%   {stroke-dashoffset: 700px;}
+    100% {stroke-dashoffset: 0;}
+}
+.ani5{
+    stroke-dasharray: 1089px;
+    stroke-dashoffset: 1089px;
+    animation: ani5 1s infinite linear alternate-reverse;
+}
+@keyframes ani5{
+    0%   {stroke-dashoffset: 1089px;}
+    100% {stroke-dashoffset: 0;}
+}
+.ani6{
+    stroke-dasharray: 411px;
+    stroke-dashoffset: 411px;
+    animation: ani6 1s infinite linear alternate-reverse;
+}
+@keyframes ani6{
+    0%   {stroke-dashoffset: 411px;}
+    100% {stroke-dashoffset: 0;}
+}
+</code></pre>
+<!-- //Intro8 -->
+<br><br>
+<h2 id="intro3" class="page-header">Sample01</h2>
+<p class="bs-callout bs-callout-info">SVG를 활용한 예제입니다</p>
+<p class="codepen" data-height="500" data-theme-id="light" data-default-tab="result" data-user="jiwoncodepen" data-slug-hash="GRjJvgR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="svg-textanimation">
+    <span>See the Pen <a href="https://codepen.io/jiwoncodepen/pen/GRjJvgR">
+    svg-textanimation</a> by jiwon (<a href="https://codepen.io/jiwoncodepen">@jiwoncodepen</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.sfo2.cdn.digitaloceanspaces.com/assets/embed/ei.js"></script>
+
+<br><br>
+<h2 id="intro3" class="page-header">Sample02</h2>
+<p class="bs-callout bs-callout-info">SVG를 활용한 예제입니다</p>
+<p class="codepen" data-height="500" data-theme-id="light" data-default-tab="result" data-user="jiwoncodepen" data-slug-hash="vYXOJgY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="svt-textanimation02">
+    <span>See the Pen <a href="https://codepen.io/jiwoncodepen/pen/vYXOJgY">
+    svt-textanimation02</a> by jiwon (<a href="https://codepen.io/jiwoncodepen">@jiwoncodepen</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.sfo2.cdn.digitaloceanspaces.com/assets/embed/ei.js"></script>
+
+<br><br>
+<h2 id="intro3" class="page-header">Sample03</h2>
+<p class="bs-callout bs-callout-info">SVG를 활용한 예제입니다</p>
+<p class="codepen" data-height="500" data-theme-id="light" data-default-tab="result" data-user="jiwoncodepen" data-slug-hash="abmOyRr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="svg-parallax">
+    <span>See the Pen <a href="https://codepen.io/jiwoncodepen/pen/abmOyRr">
+    svg-parallax</a> by jiwon (<a href="https://codepen.io/jiwoncodepen">@jiwoncodepen</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.sfo2.cdn.digitaloceanspaces.com/assets/embed/ei.js"></script>
+        </div>
+        <!-- //col-md-12 -->
         </div>
         <!-- //row -->
     </div>
