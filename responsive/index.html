@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/lightgallery.css">
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
@@ -174,7 +175,7 @@
                 <h2 class="ir_so">반응형 사이트 컨텐츠</h2>
                 <section id="cont_left">
                     <h3 class="ir_so">반응형 사이트 왼쪽 컨텐츠</h3>
-                    <article class="columm col1">
+                    <article class="column col1">
                         <h4 class="col_tit">Menu</h4>
                         <p class="col_desc">Box-shadow를 이용한 마우스 오버 효과입니다.</p>
                         <!-- 메뉴 -->
@@ -190,7 +191,7 @@
                         </div>
                         <!-- //메뉴 -->
                     </article>
-                    <article class="columm col2">
+                    <article class="column col2">
                         <h4 class="col_tit">Notice</h4>
                         <p class="col_desc">게시판 영역의 한줄 효과와 두줄 효과 게시판입니다.</p>
                         <!-- 게시판: 한줄 효과 -->
@@ -218,7 +219,7 @@
                         </div> 
                         <!-- //게시판 -->
                     </article>
-                    <article class="columm col3">
+                    <article class="column col3">
                         <h4 class="col_tit">Blog</h4>
                         <p class="col_desc">해상도에 따라 이미지를 다르게 표현하는 방법입니다.</p>
                         <!-- blog1 -->
@@ -244,7 +245,7 @@
                 </section>
                 <section id="cont_center">
                     <h3 class="ir_so">반응형 사이트 가운데 컨텐츠</h3>
-                    <article class="columm col4">
+                    <article class="column col4">
                         <h4 class="col_tit">Slick Slider</h4>
                         <p class="col_desc">slick.js를 이용한 이미지 슬라이드 효과입니다.</p>
                         <!-- 이미지 슬라이드 -->
@@ -275,7 +276,7 @@
                         <!-- //이미지 슬라이드 -->
                     </article>
 
-                    <article class="columm col5">
+                    <article class="column col5">
                         <h4 class="col_tit">Title</h4>
                         <p class="col_desc">이 곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
                         <!--  -->
@@ -308,7 +309,7 @@
 
                 <section id="cont_right">
                     <h3 class="ir_so">반응형 사이트 오른쪽 컨텐츠</h3>
-                    <article class="columm col7">
+                    <article class="column col7">
                         <h4 class="col_tit">Effect1</h4>
                         <p class="col_desc">CSS의 Transform을 이용한 마우스 오버효과</p>
                         <!-- slde1 -->
@@ -320,7 +321,7 @@
                         </div>
                         <!-- // -->
                     </article>
-                    <article class="columm col8">
+                    <article class="column col8">
                         <h4 class="col_tit">Effect2</h4>
                         <p class="col_desc">CSS의 transform을 이용한 마우스 오버효과입니다.</p>
                         <!-- slde2 -->
@@ -340,7 +341,7 @@
                         </div>
                         <!-- //side2 -->
                     </article>
-                    <article class="columm col9">
+                    <article class="column col9">
                         <h4 class="col_tit">Title</h4>
                         <p class="col_desc">타이틀과 관련된 부분입니다</p>
                         <!-- slde3 -->
@@ -410,12 +411,12 @@ $(window).resize(function(){
     }
 });
 
-        $(".slider").slick({
-            autoplay:true,
-            autoplaySpeed: 2000,
-            dots : true,
-            arrows:true
-        });
+$(".slider").slick({
+    autoplay:true,
+    autoplaySpeed: 2000,
+    dots : true,
+    arrows:true
+});
     </script>
 </body>
 </html>
