@@ -167,6 +167,9 @@
             <div class="slider"><img src="img/images08.png" alt="이미지3"><span>이미지3</span></div>
             <div class="slider"><img src="img/images07.png" alt="이미지4"><span>이미지4</span></div>
             <div class="slider"><img src="img/images06.png" alt="이미지5"><span>이미지5</span></div>
+            <div class="slider"><img src="img/images05.png" alt="이미지6"><span>이미지6</span></div>
+            <div class="slider"><img src="img/images04.png" alt="이미지7"><span>이미지7</span></div>
+            <div class="slider"><img src="img/images03.png" alt="이미지8"><span>이미지8</span></div>
         </div>
     </main>
 
@@ -192,10 +195,14 @@
             //  slider[currentIndex].style.display = "none";
             //  slider[nextIndex].style.display = "block";
 
-              slider[currentIndex].style.opacity = "0";
-              slider[nextIndex].style.opacity = "1";
+            slider[currentIndex].style.opacity = "0";
+            slider[nextIndex].style.opacity = "1";
 
-            currentIndex = nextIndex;
+            //currentIndex = nextIndex;
+            currentIndex = nextIndex++;
+
+            console.log("currentIndex"+currentIndex);
+            console.log("nextIndex"+nextIndex);
         },3000);
     </script>
 </body>
