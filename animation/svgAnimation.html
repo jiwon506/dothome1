@@ -753,6 +753,107 @@ background-image: linear-gradient(60deg, #ff5858,#f09819); background-size: cove
 }
 </code></pre>
 <!-- //Intro8 -->
+ <!-- Intro9 -->
+ <div class="bs-docs-section">
+    <h2 id="intro9" class="page-header">마스크(Mask)</h2>
+    <div class="sample">
+        <h3><span></span><em class="sr-only">SVG</em></h3>
+        <div class="svgBox svg8">
+        <svg>
+            <rect class="ani1"></rect>
+        </svg>
+        <svg>
+        <rect class="ani2"></rect>
+        </svg>
+        <svg>
+        <path class="ani3" fill="none" stroke="#880e4f" stroke-width="2" d="M7,154.667c0-82.358,65.152-149,145.667-149"/>
+        </svg>
+        <svg>
+            <path class="ani4" fill="none" stroke="#880e4f" stroke-width="2" d="M151.534,123.547c-33.711,33.711-88.369,33.711-122.08,0
+            c-26.97-26.969-26.97-70.695,0-97.665c21.575-21.576,56.556-21.576,78.131,0c17.261,17.26,17.261,45.245,0.001,62.504
+            c-13.809,13.809-36.196,13.809-50.005,0c-11.046-11.046-11.046-28.956,0-40.002c8.837-8.837,23.166-8.837,32.003,0
+            c7.069,7.07,7.07,18.532,0,25.602c-5.656,5.657-14.826,5.657-20.482,0c-4.524-4.524-4.524-11.86,0-16.385"/>
+        </svg>
+        <svg>
+            <path class="ani5" fill="none" stroke="#880e4f" stroke-width="2" d="M131.502,129.683c-44.4-42.871-49.621-39.867-34.943,20.102
+            c-14.678-59.969-20.694-60.265-40.261-1.983c19.566-58.281,14.666-61.783-32.799-23.436C70.963,86.018,68.733,80.421,8.573,86.918
+            c60.16-6.497,61.31-12.409,7.692-39.569c53.617,27.16,57.781,22.808,27.864-29.131c29.917,51.938,35.772,50.527,39.189-9.441
+            c-3.417,59.969,2.272,61.948,38.075,13.245c-35.803,48.703-32.086,53.443,24.869,31.726C89.308,75.465,89.87,81.462,150.03,93.884
+            C89.87,81.462,87.102,86.812,131.502,129.683z"/>
+        </svg>
+        <svg>
+            <path class="ani6" fill="none" stroke="#880e4f" stroke-width="2" d="M58.665,139.312c0-6.873,42-6.873,42-13.747s-42-6.874-42-13.748
+            s42-6.874,42-13.748c0-6.872-42-6.872-42-13.744c0-6.874,42-6.874,42-13.747c0-6.877-42-6.877-42-13.753
+            c0-6.874,42-6.874,42-13.748c0-6.878-42-6.878-42-13.757s42-6.879,42-13.758"/>
+        </svg>
+    </div>
+</div>
+<pre class="line-numbers language-css"><code>.ani1{
+width: 100px; height: 100px;
+x: 30px; y: 30px;
+fill: none;
+stroke: #880c41;
+stroke-width: 5px;
+stroke-dasharray: 50;
+stroke-dashoffset: 50;
+animation: ani1 1s infinite linear alternate-reverse;
+}
+@keyframes ani1{
+0%   {stroke-dashoffset: 50;}
+100% {stroke-dashoffset: 0;}
+}
+.ani2{
+width: 100px; height: 100px;
+x: 30px; y: 30px;
+fill: none;
+stroke: #880c41;
+stroke-width: 5px;
+stroke-dasharray: 400;
+stroke-dashoffset: 400;
+animation: ani2 2s infinite linear alternate-reverse;
+}
+@keyframes ani2{
+0%   {stroke-dashoffset: 400;}
+100% {stroke-dashoffset: 0;}
+}
+.ani3{
+stroke-dasharray: 230px;
+stroke-dashoffset: 230px;
+animation: ani3 1s infinite linear alternate-reverse;
+}
+@keyframes ani3{
+0%   {stroke-dashoffset: 230px;}
+100% {stroke-dashoffset: 0;}
+}
+.ani4{
+stroke-dasharray: 700px;
+stroke-dashoffset: 605px;
+animation: ani4 1s infinite linear alternate-reverse;
+}
+@keyframes ani4{
+0%   {stroke-dashoffset: 700px;}
+100% {stroke-dashoffset: 0;}
+}
+.ani5{
+stroke-dasharray: 1089px;
+stroke-dashoffset: 1089px;
+animation: ani5 1s infinite linear alternate-reverse;
+}
+@keyframes ani5{
+0%   {stroke-dashoffset: 1089px;}
+100% {stroke-dashoffset: 0;}
+}
+.ani6{
+stroke-dasharray: 411px;
+stroke-dashoffset: 411px;
+animation: ani6 1s infinite linear alternate-reverse;
+}
+@keyframes ani6{
+0%   {stroke-dashoffset: 411px;}
+100% {stroke-dashoffset: 0;}
+}
+</code></pre>
+<!-- //Intro9 -->
 <br><br>
 <h2 id="intro3" class="page-header">Sample01</h2>
 <p class="bs-callout bs-callout-info">SVG를 활용한 예제입니다</p>
@@ -782,6 +883,16 @@ background-image: linear-gradient(60deg, #ff5858,#f09819); background-size: cove
     on <a href="https://codepen.io">CodePen</a>.</span>
   </p>
   <script async src="https://cpwebassets.sfo2.cdn.digitaloceanspaces.com/assets/embed/ei.js"></script>
+
+  <br><br>
+<h2 id="intro3" class="page-header">Sample03</h2>
+<p class="bs-callout bs-callout-info">SVG를 활용한 예제입니다</p>
+<p class="codepen" data-height="500" data-theme-id="light" data-default-tab="result" data-user="jiwoncodepen" data-slug-hash="vYXxMjK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Svg Wave Mask">
+    <span>See the Pen <a href="https://codepen.io/jiwoncodepen/pen/vYXxMjK">
+    Svg Wave Mask</a> by jiwon (<a href="https://codepen.io/jiwoncodepen">@jiwoncodepen</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
         </div>
         <!-- //col-md-12 -->
         </div>
