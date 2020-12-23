@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reveal-javascript</title>
     <style>
-                /* reset */
-                @font-face {
+            /* reset */
+            @font-face {
             font-family: 'NEXON Lv1 Gothic OTF';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
             font-weight: normal;
@@ -233,7 +233,7 @@
             transform: translateX(0);
         }
 
-        /* remeal */
+        /* reveal */
         .reveal > div, 
         .reveal > span {
             opacity: 0;
@@ -333,7 +333,7 @@
 <body>
        <!-- info -->
        <div class="info left">
-        <h1>Parallax Effect06 - jQuery</h1>
+        <h1>Parallax Effect06 - javascript</h1>
         <p>패랠랙스 스크로링 효과 - 리빌효과</p>
     </div>
     <div class="info right">
@@ -440,28 +440,6 @@
     </main>
 
     <script>
-        //  $(window).scroll(function(){
-        //     let scrollTop = $(window).scrollTop();
-            
-        //     $(".reveal").each(function(){
-        //         if( scrollTop + $(window).height()/2 > $(this).offset().top ){
-        //             $(this).addClass("show");
-        //         }
-        //     });
-        // });
-        
-        /*javascript*/
-        // window.addEventListener("scroll",()=>{
-        //     let scrollTop = document.documentElement.scrollTop;
-
-        //     document.querySelectorAll(".reveal").forEach(function(elem){
-        //         if(scrollTop + window.innerHeight/2 > elem.offsetTop ){
-        //             elem.classList.add("show");
-        //         }
-        //     });
-
-        // });
-
         function scrollReaveal(){
             const reveal = document.querySelectorAll(".reveal");
             reveal.forEach(elem => {
@@ -476,7 +454,6 @@
         }
         
         window.addEventListener("scroll",scrollReaveal);
-
     </script>
 </body>
 </html>
