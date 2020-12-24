@@ -72,12 +72,31 @@
             display: block;
             top: 80%;
     }
-    .s2Txt04 .img1 {
-            margin: 30px;
-        }
-        .s2Txt04 .img1 img {
-            border-radius: 30px 30px 0 0;
-        }
+    .s2Txt04 .img1{ width: 55vw; height: 53vh;}
+    .s2Txt04 .img1 .webstandard{ border-radius: 20px 20px 0 0; }
+    .s2Txt04 .img2{ width: 55vw; height: 53vh;}
+    .s2Txt04 .img2 .responsive{ border-radius: 20px 20px 0 0; }
+    .s2Txt04 .img3{ width: 55vw; height: 53vh;}
+    .s2Txt04 .img3 .megabox{ border-radius: 20px 20px 0 0; }
+    .s2Txt04 .img4{ width: 55vw; height: 53vh;}
+    .s2Txt04 .img4 .react{ border-radius: 20px 20px 0 0; }
+
+    /* section03 */
+    /* I've been working on sites */
+    .s3Txt02 h2{
+            font-size: 3vw;
+            text-align: center;
+            line-height: 1.2;
+            background-repeat: no-repeat;
+            background-image: url(img/apple-txtbg2.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;
+    }
+    
     </style>
 </head>
 <body>
@@ -122,7 +141,7 @@
         data-7899="display:none"
         data-7900="display:block"
         data-17000="display:block"
-        data-17001="display:none"
+        data-17001="display:block"
         >
         <div class="s2Txt01 fixed" data-title="검은색배경"></div>
         <div class="s2Txt02">
@@ -130,6 +149,9 @@
             data-7900="opacity:0; transform: translate(-50%, -50%) scale(2)"
             data-8200="opacity:1; top:50%; transform: translate(-50%, -50%) scale(2)"
             data-8800="opacity:1; top:10%; transform: translate(-50%, -50%) scale(1)"
+            data-14000="opacity:1; top:10%; transform: translate(-50%, -50%) scale(1)"
+            data-15000="opacity:1; top:50%; transform: translate(-50%, -50%) scale(1)"
+            data-15001="opacity:0;"
             >I'VE BEEN WORKING ON SITES</h2>
             <div class="s2Txt03">
                 <div class="fixed text1">
@@ -208,40 +230,72 @@
             <div class="s2Txt04 fixed"
             data-8900="opacity:0;top:80%;"
             data-9000="opacity:1;top:70%;"
+            data-13000="opacity:1;top:70%;"
+            data-14000="opacity:0;"
             >
                     <div class="img1 fixed"
-                    data-10000="opacity:1;"
-                    data-10100="opacity:0;"
+                    data-9100="opacity:0;"
+                    data-9400="opacity:1;"
+                    data-9900="opacity:1;"
+                    data-10000="opacity:0;"
                     >
-                        <img src="img/apple-webstandard.png" alt="웹표준">
+                        <img class="webstandard" src="img/apple-webstandard.png" alt="웹표준">
                         <a href="#" class="view">VIEW</a>
                     </div>
 
                     <div class="img2 fixed"
-                    data-10100="opacity:1;"
-                    data-10800="opacity:0; margin-left:50vw"
+                    data-10000="opacity:0;"
+                    data-10200="opacity:1;"
+                    data-10500="opacity:1;"
+                    data-10800="opacity:0;"
                     >
-                        <img src="img/apple-megabox.jpg" alt="반응형">
+                        <img class="responsive" src="img/apple-webstandard.png" alt="반응형사이트">
                         <a href="#" class="view">VIEW</a>
                     </div>
 
                     <div class="img3 fixed"
-                    data-10800="opacity:1;"
+                    data-10800="opacity:0;"
+                    data-11000="opacity:1;"
+                    data-11500="opacity:1;"
                     data-12000="opacity:0;"
                     >
-                        <img src="img/apple-megabox.jpg" alt="반응형">
+                        <img class="megabox" src="img/apple-megabox.jpg" alt="기업형사이트">
                         <a href="#" class="view">VIEW</a>
                     </div>
 
                     <div class="img4 fixed"
-                    data-12000="opacity:1;"
+                    data-12000="opacity:0;"
+                    data-12300="opacity:1;"
+                    data-12600="opacity:1;"
                     data-13000="opacity:0;"
                     >
-                        <img src="img/apple-megabox.jpg" alt="반응형">
+                        <img class="react" src="img/apple-react.jpg" alt="리액트사이트">
                         <a href="#" class="view">VIEW</a>
                     </div>
             </div>
         <!-- //section2 -->
+
+        <!-- section3 -->
+        <section id="section3"
+        data-15500= "display:block"
+        data-25000 = "display:none"
+        >
+            <div class="s3Txt01 fixed" data-title="검은색배경"></div>
+            <div class="s3Txt02">
+                <h2 class="fixed"
+                data-15500="opacity:0; transform: translate(-50%, -50%) scale(1)"
+                data-15900="opacity:1; top:50%; transform: translate(-50%, -50%) scale(1)"
+                data-16500="opacity:1; top:80%; transform: translate(-50%, -50%) scale(1)"
+                data-25000="opacity:1; top:80%; transform: translate(-50%, -50%) scale(1)"
+                >I'VE BEEN WORKING ON ANIMATION</h2>
+                <iframe src="" width="500" height="500" frameborder="0"
+                    data-16500="opacity:1; top:70%; transform: translate(-50%, -50%) scale(1)"
+                ></iframe>
+            </div>
+            <div class="s3Txt03">
+            </div>
+        </section>
+        <!-- //section3 -->
 
 
     <!-- script -->
