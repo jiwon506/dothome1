@@ -9,7 +9,7 @@
       {
         "id": 1,
         "link": "https://react100-class.web.app/#/site",
-        "image": "./reactimg/react1.jpg",
+        "image": "../img/port1.jpg",
         "title": "React Portfolio",
         "category": "PORTFOLIO1",
         "rating": 5
@@ -17,7 +17,7 @@
       {
         "id": 2,
         "link": "https://vue101-class.web.app/site",
-        "image": "./reactimg/react1.jpg",
+        "image": "../img/port2.jpg",
         "title": "Vue Portfolio",
         "category": "PORTFOLIO2",
         "rating": 4.9
