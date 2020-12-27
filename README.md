@@ -7,10 +7,10 @@
 
 ‥‥
 
-#portfolio(1)기존사이트
+#portfolio(1)학원수업 포트폴리오
 <a href="https://jiwon506.github.io/dothome1/index.html">바로가기</a>
 
-#portfolio(2)새로운사이트
+#portfolio(2)개인작업 포트폴리오
 <a href="https://jiwon506.github.io/dothome1/index.html">바로가기</a>
 
 ‥‥
