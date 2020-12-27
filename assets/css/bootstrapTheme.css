@@ -7,6 +7,13 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */ 
+ @font-face {
+	font-family: 'LotteMartHappy';
+	font-style: normal;
+	font-weight: 700;
+	src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff') format('woff');
+  }
+
 .clearfix {
   *zoom: 1;
 }
@@ -3692,12 +3699,11 @@ input[type="submit"].btn.btn-mini {
   float: left;
   display: block;
   padding: 17px 14px;
-  margin-left: -20px;
-  font-size: 20px;
-  font-weight: 200;
-    font-size: 33px;
-  color: #000;
-    font-family: Abel;;
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: 100;
+  color: #fff;
+  font-family: 'LotteMartHappy';
 }
 .navbar .brand:hover,
 .navbar .brand:focus {
