@@ -1,4 +1,4 @@
-# 2020 UIUX DESIGN & PROGRAMMING
+# 2020 UIUX PROGRAMMING
 
 #react 사이트
 <a href="https://react100-class.web.app/#/">바로가기</a>
