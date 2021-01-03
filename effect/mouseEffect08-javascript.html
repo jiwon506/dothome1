@@ -198,6 +198,7 @@
         </div>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
         // $(window).on("mousemove", mouseMove);
 
@@ -218,13 +219,64 @@
 
         //class써서
         
-        class MouseMove {
-            constructor(){
-                this.MouseMove();
+        class MouseMove{
+            constructor(obj){
+                this.init();
+            }
+            init(){
+                this.bind();
+                this.event();
+            }
+            bind(){
+                this.MouseMove1 = this.MouseMove1.bind(this);
+            }
+            event(){
+                window.addEventListener("mousemove", this.mouseMove1);
+            }
+            MouseMove1(e){
+                let positionSlow  = (e.pageX - ($(window).width()/2)) * 0.1;
+                let positionFast  = (e.pageX - ($(window).width()/2)) * 0.2;
+                gsap.to(".span-slow", {
+                duration: .4,
+                x: positionSlow
+                });
+                gsap.to(".span-fast", {
+                duration: .4,
+                x: -positionFast
+                });
             }
         }
 
         new MouseMove();
+
+        class MouseEvent{
+            constructor(obj){
+                this.init();
+            }
+            init(){
+                this.bind();
+                this.event();
+            }
+            bind(){
+                this.mouseMove = this.mouseMove.bind(this);
+            }
+            event(){
+                window.addEventListener('mousemove', this.mouseMove);
+            }
+            mouseMove(e){
+                let positionSlow = (e.pageX - window.innerWidth/2) * 0.1;
+                let positionFast = (e.pageX - window.innerWidth/2) * 0.2; 
+                gsap.to(".span-slow", {
+                duration: .4,
+                x: positionSlow,
+                })
+                gsap.to(".span-fast", {
+                    duration: .4,
+                    x: -positionFast,
+                })
+            }
+        }
+        new MouseEvent();
     </script>
 </body>
 </html>
