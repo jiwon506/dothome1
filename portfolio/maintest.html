@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainTest</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        li {list-style: none;}
+        a {text-decoration: none; color: #000;}
+        a:hover {text-decoration: none;}
+        /* header */
+        #header {
+            position: fixed;
+            left: 0; top: 0;
+            width: 100%; height: 100px;
+            z-index: 3000;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #header .logo{
+            flex: 0 0 50%;
+            padding-left: 100px;
+        }
+        #header .logo h1{
+            color: #fff;
+            font-size: 20px;
+        }
+        #header .hamNav {
+            flex: 0 0 30%;
+            text-align: right;
+            padding-right: 100px;
+        }
+        #header .hamNav .ham {
+            display: inline-block;
+            width: 50px; height: 50px;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+        #header .hamNav .ham span {
+            display: block;
+            position: absolute;
+            left: 10px; top: 25px;
+            width: 30px; height: 3px;
+            background: #000;
+        }
+        #header .hamNav .ham span::before {
+            content: '';
+            position: absolute;
+            top: -10px; left: 0;
+            width: 50%; height: 3px;
+            background: #000;
+            transform-origin: left;
+        }
+        #header .hamNav .ham span::after {
+            content: '';
+            position: absolute;
+            bottom: -10px; right: 0;
+            width: 50%; height: 3px;
+            background: #000;
+            transform-origin: right;
+        }
+        #header .hamNav .ham.active{
+            transform: rotate(135deg);
+        }
+        #header .hamNav .ham.active span::before{
+            top:0; transform: translateX(100%) rotate(-90deg);
+        }
+        #header .hamNav .ham.active span::after{
+            bottom:0; transform: translateX(-100%) rotate(-90deg);
+        }
+        /* slider */
+        .slider-wrap {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .slider-img {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+        }
+        .slider-img .slider {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .slider-img .slider:nth-child(1){
+            background: #8b8b8b;
+        }
+        .slider-img .slider:nth-child(2){
+            background: #E9EFFD;
+        }
+        .slider-img .slider:nth-child(3){
+            background: #FAE3F5;
+        }
+        .slider-img .slider:nth-child(4){
+            background: #FBE368;
+        }
+        .slider-img .slider:nth-child(5){
+            background: #CCEBFA;
+        }
+        .slider-img .slider:nth-child(6){
+            background: #E9EFFD;
+        }
+        .slider-img .slider:nth-child(7){
+            background: #F4F2EC;
+        }
+        /* sliderText */
+        .slider{
+
+        }
+        .slider .slider_text{
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-family: 'Roboto';
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            background: #ccc;
+            line-height: 7vw;
+            font-size: 7vw;
+        }
+        .slider .slider_img {
+            /* display: none; */
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+        }
+        .slider .slider_img img{
+            max-width: 500px;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        /* slider-nav */
+        .slider-nav a {
+            position: absolute;
+            width: 100px;
+            height: 100vh;
+            bottom: 0;
+            z-index: 2000;
+            background:transparent;
+        }
+        .slider-nav a svg {
+            width: 18px; height: 18px;
+            position: absolute;
+        }
+        .slider-nav a.prev {
+            left: 0;
+        }
+        .slider-nav a.prev svg {
+            left: 0;
+            bottom: 40px;
+            margin: 45px 0 0 40px;
+            transform: rotate(45deg);
+        }
+        .slider-nav a.next {
+            right: 0;
+        }
+        .slider-nav a.next svg {
+            right: 0;
+            bottom: 40px;
+            margin: 40px 50px 0 40px;
+            transform: rotate(-135deg);
+        }
+        /* slider-page */
+        .slider-page {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            bottom: 0;
+            height: 100px;
+            background: transparent;
+            z-index: 1000;
+            text-align: center;
+        }
+        .slider-page a {
+            display: inline-block;
+            width: 10px; height: 10px;
+            line-height: 9px;
+            border-radius: 50%;
+            border: 1px solid rgb(211, 211, 211);
+            color: #000;
+            font-family: 'Roboto';
+            font-style: italic;
+            font-size: 12px;
+            font-weight: bold;
+            text-indent: -9999px;
+            margin: 50px 15px;
+        }
+        .slider-page a.active {
+            border: 0;
+            color: #333;
+            text-indent: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+    <!-- //cursor -->
+    <header id="header">
+        <div class="logo">
+            <h1>KIMG1<br />PORTFOLIO®</h1>
+        </div>
+        <div class="hamNav">
+            <a href="#" class="ham active"><span></span></a>
+        </div>
+    </header>
+    <!-- //header -->
+    <main>
+        <div class="slider-wrap">
+            <div class="slider-img">
+                <div class="slider">
+                    <div class="slider_text">Portfolio</div>
+                    <div class="slider_svg"></div>
+                    <figure class="slider_img">
+                        <img src="./assets/img/slideimg1labtop.png" alt="이미지랩탑1">
+                        <img src="./assets/img/slideimg1pad.png" alt="이미지패드1">
+                        <img src="./assets/img/slideimg1phone.png" alt="이미지폰1">
+                    </figure>
+                </div>
+                <div class="slider">
+                    <div class="slider_text">Animation</div>
+                    <div class="slider_svg"></div>
+                    <figure class="slider_img">
+                        <img src="./assets/img/slideimg2left.png" alt="이미지랩탑1">
+                        <img src="./assets/img/slideimg2right.png" alt="이미지패드1">
+                    </figure>
+                </div>
+                <div class="slider">
+                    <div class="slider_text">Figma</div>
+                    <div class="slider_svg"></div>
+                    <figure class="slider_img">
+                        <img src="./assets/img/slideimg3left.png" alt="이미지랩탑1">
+                        <img src="./assets/img/slideimg3mid.png" alt="이미지랩탑1">
+                        <img src="./assets/img/slideimg3right.png" alt="이미지랩탑1">
+                    </figure>
+                </div>
+                <div class="slider">
+                    <div class="slider_text">AboutMe</div>
+                    <div class="slider_svg"></div>
+                    <figure class="slider_img">
+                        <img src="./assets/img/slideimg1labtop.png" alt="이미지랩탑1">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="slider-nav">
+        <a href="#" class="prev">
+            <svg viewBox="-1 -2 18 18">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3.26849658e-13,8.84328471 L3.26849658e-13,-4.19220214e-13" stroke="#444444" stroke-width="2"></path>
+                    <path d="M2.27373675e-13,8.84328471 L8.84328471,8.84328471" stroke="#444444" stroke-width="2"></path>
+                </g>
+            </svg>
+        </a>
+        <a href="#" class="next">
+            <svg viewBox="-1 -2 18 18">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3.26849658e-13,8.84328471 L3.26849658e-13,-4.19220214e-13" stroke="#444444" stroke-width="2"></path>
+                    <path d="M2.27373675e-13,8.84328471 L8.84328471,8.84328471" stroke="#444444" stroke-width="2"></path>
+                </g>
+            </svg>
+        </a>
+    </div>
+    <div class="slider-page">
+        <a href="#" class="active">01</a>
+        <a href="#">02</a>
+        <a href="#">03</a>
+        <a href="#">04</a>
+        <a href="#">05</a>
+        <a href="#">06</a>
+        <a href="#">07</a>
+        <a href="#">08</a>
+    </div>
+    <!-- //main -->
+</body>
+</html>

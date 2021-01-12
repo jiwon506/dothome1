@@ -508,7 +508,7 @@
             // } else {
             //     document.querySelector(".s9OffsetTop").style.color="white";
             // }
-  
+
                 for(let i = 1; i<=9; i++){
                 //출력용 한번에 (for) innerText = textContent
                 document.querySelector(".s"+i+"OffsetTop").innerText = document.getElementById( "section"+i ).offsetTop;
@@ -519,51 +519,52 @@
                 }
             }
             //나타나기
-            if( pageYOffset > document.querySelector("section1").offsettop ){
-                document.querySelector("section1").classList.add("show");
-            } else{
-                document.querySelector("section1").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section2").offsettop ){
-                document.querySelector("section2").classList.add("show");
-            } else{
-                document.querySelector("section2").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section3").offsettop ){
-                document.querySelector("section3").classList.add("show");
-            } else{
-                document.querySelector("section3").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section4").offsettop ){
-                document.querySelector("section4").classList.add("show");
-            } else{
-                document.querySelector("section4").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section5").offsettop ){
-                document.querySelector("section5").classList.add("show");
-            } else{
-                document.querySelector("section5").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section6").offsettop ){
-                document.querySelector("section6").classList.add("show");
-            } else{
-                document.querySelector("section6").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section7").offsettop ){
-                document.querySelector("section7").classList.add("show");
-            } else{
-                document.querySelector("section7").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section8").offsettop ){
-                document.querySelector("section8").classList.add("show");
-            } else{
-                document.querySelector("section8").classList.remove("show");
-            }
-            if( pageYOffset > document.querySelector("section9").offsettop ){
-                document.querySelector("section9").classList.add("show");
-            } else{
-                document.querySelector("section9").classList.remove("show");
-            }
+            // if( pageYOffset > document.querySelector("section1").offsettop ){
+            //     document.querySelector("section1").classList.add("show");
+            // } else{
+            //     document.querySelector("section1").classList.remove("show");
+            // }
+            // if( pageYOffset > document.querySelector("section2").offsettop ){
+            //     document.querySelector("section2").classList.add("show");
+            // } else{
+            //     document.querySelector("section2").classList.remove("show");
+            // }
+            // if( pageYOffset > document.querySelector("section3").offsettop ){
+            //     document.querySelector("section3").classList.add("show");
+            // } else{
+            //     document.querySelector("section3").classList.remove("show");
+            // }
+            // if( pageYOffset > document.querySelector("section4").offsettop ){
+            //     document.querySelector("section4").classList.add("show");
+            // } else{
+            //     document.querySelector("section4").classList.remove("show");
+            // }
+            // if( pageYOffset > document.querySelector("section5").offsettop ){
+            //     document.querySelector("section5").classList.add("show");
+            // } else{
+            //     document.querySelector("section5").classList.remove("show");
+            // }
+            // if( pageYOffset > document.querySelector("section6").offsettop ){
+            //     document.querySelector("section6").classList.add("show");
+            // } else{
+            //     document.querySelector("section6").classList.remove("show");
+            // }
+            // if( pageYOffset > document.querySelector("section7").offsettop ){
+            //     document.querySelector("section7").classList.add("show");
+            // } else{
+            //     document.querySelector("section7").classList.remove("show");
+            // }
+            // if( pageYOffset > document.querySelector("section8").offsettop ){
+            //     document.querySelector("section8").classList.add("show");
+            // } else{
+            //     document.querySelector("section8").classList.remove("show");
+            // }
+            // if( pageYOffset > document.querySelector("section9").offsettop ){
+            //     document.querySelector("section9").classList.add("show");
+            // } else{
+            //     document.querySelector("section9").classList.remove("show");
+            // }
+
             //나타나기 한번에
             document.querySelectorAll(".content-item").forEach( (elem ) => {
                 if(pageYOffset > elem.offsetTop ){
