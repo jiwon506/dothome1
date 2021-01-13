@@ -121,7 +121,7 @@
         .slider-img .slider:nth-child(5){
             background: #CCEBFA;
         }   
-        
+
         .slider-img .slider:nth-child(6){
             background: #E9EFFD;
         }
@@ -492,7 +492,7 @@
         //자동 플레이
         function startTimer(){
             sliderTimer = setInterval(function(){
-                var intervalNum = (currentIndex + 1) % sliderLength;;
+                var intervalNum = (currentIndex + 1) % sliderLength;
                 gotoSlider(intervalNum);
             }, interval);
         }
