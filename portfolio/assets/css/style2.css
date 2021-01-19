@@ -16,6 +16,7 @@
     font-family: var(--font-family-entitle);
     /* font-family: var(--font-family-kotitle);
     font-family: var(--font-family-desc); */
+    overflow-x:hidden;
 }
 
 /*scroll*/

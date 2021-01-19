@@ -86,9 +86,9 @@
                     <p class="bs-callout bs-callout-info">주관식 1문제 스타일(제이쿼리)</p>
                     <iframe width="100%" height="600px" src="quizEffect01-jquery.html"></iframe>
                     
-                          <div class="javascript_Source"> 
-                              <h3 class="btn btn-default">javascript_Source</h3>
-<pre class="line-numbers language-javascript"><code>//선택자
+                        <div class="javascript_Source"> 
+                            <h3 class="btn btn-default">javascript_Source</h3>
+<pre class="line-numbers language-jquery_Source"><code>//선택자
 const questionAsk = $(".question");
 const questionNum = $(".num");
 const questionBtn = $(".confirm-btn");
@@ -119,34 +119,9 @@ $(questionBtn).click(function(){
     questionEx.show();
 });
 </code></pre> 
-<pre class="line-numbers language-javascript"><code>//선택자
-const questionAsk = document.querySelector(".question");
-const questionNum = document.querySelector(".num");
-const questionBtn = document.querySelector(".conrirm-btn");
-const questionAnswer = document.querySelector(".conrirm-answer");
-const questionEx = document.querySelector(".conrirm-ex");
 
-//문제 출력
-questionNum.innerHTML =quizNum;
-questionBtn.innerHTML= quizNum;
-questionAnswer.innerHTML =quizNum;
-questionEx.innerHTML =quizNum;
-
-//정답숨기기
-questionAnswer.style.display = "none";
-questionEx.style.display = "none";
-
-//정답확인
-questionBtn.addEventListener("click",function(){
-    questionBtn.style.display = "none";
-    questionAnswer.style.display = "block";
-    questionEx.style.display = "none";
-});
-    </code></pre>                              
-                          </div>
-
-                          <div class="jquery_Source">
-                          <h3 class="btn btn-default">jQuery_source</h3>
+                    <div class="jquery_Source">
+                    <h3 class="btn btn-default">jQuery_source</h3>
 <pre class="line-numbers language-javascript"><code>
     //제이쿼리 사용 jQuery
     //문제정보

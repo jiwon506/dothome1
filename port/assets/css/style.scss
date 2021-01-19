@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap');
+@font-face {font-family: 'NEXON Lv2 Gothic Light';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');font-weight: normal;font-style: normal;}
+
+// font
+@mixin en-cont-font {
+    font-size: 1rem;
+    font-family: 'NEXON Lv2 Gothic Light';
+    color : #fff;
+}
+@mixin en-font{
+    font-size: 4rem;
+    font-family: 'IM Fell Double Pica', serif;
+    color : #fff;
+}
+@mixin ko-font {
+    font-size: 1rem;
+    font-family: 'NEXON Lv2 Gothic Light';
+    color : #fff;
+}
+
+:root {font-size: 17px;}
+*,*:before,*:after {box-sizing: inherit;}
+
+html,body {
+    
+    height: 100%;
+    box-sizing: border-box;
+    
+    #header{
+        position: fixed; left: 0; top: 0;
+        z-index: 1000;
+        width: 100%; height: 80px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        width: 100%; height: 100px;
+        flex: 0 0 100px;
+        @include en-cont-font;
+
+        .logo{
+            text-align: center;flex: 0 0 22%; display: flex;align-items: center;justify-content: center;position: relative;
+            h1{@include en-cont-font;}
+        }
+        .menu{
+            position: fixed;top: 0;left: 50%;transform: translateX(-50%); height: 100px;flex: 0 0 56%;display: flex; align-items: center; justify-content: center; text-align: center;
+            span{}
+        }
+        .about{
+            flex: 0 0 22%;display: flex;align-items: center;justify-content: center;text-align: center;
+        }
+    }
+    // bg
+    .bg{
+        width: 100%; height: 100%;
+        .tile__bg{position: relative;}
+        .tile__bg--first{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: blue;}
+        .tile__bg--last{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: red;}
+    }
+    // tile
+    .tile{
+        width: 50%;height: 50%; position: relative; overflow: hidden; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto;
+        .tile__img{position: absolute; width: 100%; height: auto;}
+        .tile__img--first{}
+        .tile__img--last{}
+    }
+
+    // title
+    .title{
+        position: absolute; top: 50%; left: 10rem; color: #fff; font-size: 1rem; font-weight: 700; line-height: 1.3; overflow: hidden;
+        .title__container{
+            position: absolute; top: 0; left: 0;
+            .title__text{}
+            .title__text--first{}
+            .title__text--last{}
+        }
+    }
+    .next-tile{
+        position: absolute; top: 100px; bottom: 100px; right: 0; width: 22%; height: calc(100vh - 200px);
+        display: flex; overflow: hidden; padding: 0; background: transparent; border: 0; cursor: pointer; outline: none; z-index: 100; margin: 0;
+        .next-tile__details{
+            width: 50%; height: 100%;background: #fff;text-align: left; display: flex; justify-content: center; flex-direction: column; z-index: 10; position: relative;
+            .next-tile__heading{
+                margin-bottom: 4.5rem;text-transform: uppercase;color: #b3b3b3; font-weight: 600; display: block;
+            }
+            .next-tile__title{
+                margin-bottom: 6rem; font-size: 2rem; font-weight: 700; line-height: 1.3;
+                letter-spacing: -0.05rem; color: #222222;  display: block; position: relative;
+                .next-tile__title__text{position: absolute; top: 0; left: 0;
+                }
+                .next-tile__title__text--first{}
+                .next-tile__title__text--last{ opacity: 0;}
+            }
+            .next-tile__arrow{fill: #b3b3b3; width: 2.4rem; display: block;}
+            .test-arrow{}
+        }
+        .next-tile__preview{
+            width: 16rem; height: 100vh; position: relative; overflow: hidden; display: block;
+            .next-tile__preview__img{
+                position: absolute;
+                width: 100%;
+                height: auto;
+            }
+            .next-tile__preview__img--first{}
+            .next-tile__preview__img--last{
+                opacity: 0;
+                transform: translateY(-50%) scale(1.6);
+                transform-origin: 50% 50%;
+            }
+        }
+    }
+}
+// line파트는
