@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
 </head>
 <body>
+    <div class="progress">
+        <div class="progress-text">0</div>
+    </div>
+    <!-- //progress -->
+
     <header id="header">
-        <div class="logo"><h1>SUPPORT KIM PORTFOLIO</h1></div>
-        <div class="menu">WEBSITE <span>MENU</span> EFFECT</div>
-        <div class="about">ABOUT</div>
+        <div class="logo"><h1>SUPPORT PORTFOLIO</h1></div>
+        <div class="menu">
+            <a href="#">Website</a>
+            <a href="#"><span></span></a> 
+            <a href="#">Effect</a>
+        </div>
+        <div class="about">
+            <a href="#">About</a>
+        </div>
     </header>
     <div class="bg">
         <div class="tile__bg tile__bg--first" ></div>
@@ -47,7 +59,9 @@
     </button>
     <div class="lines isLoadid">
         <div class="lines__h shown"></div>
-        <div class="lines__v shown"><span></span></div>
+        <div class="lines__v shown">
+            <span></span>
+        </div>
         <div class="lines__crosses">
             <div class="lines__crosses__x"></div> 
             <div class="lines__crosses__x"></div> 
@@ -57,36 +71,118 @@
             <div class="lines__crosses__x"></div>
         </div>
     </div>
-    <!-- <bottom id="bottom">
-        <div class="logo"><h1>Kim port</h1></div>
-        <div class="menu">site <span>**</span> script</div>
-        <div class="about">about</div>
-    </bottom> -->
+    <bottom id="bottom">
+        <div class="logo"><p>JIWONKIM</p></div>
+        <div class="count">
+            <a href="#">Website</a>
+            <a href="#"><span></span></a> 
+            <a href="#">Effect</a>
+        </div>
+        <div class="about">
+            <a href="#">About</a>
+        </div>
+    </bottom>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="http://flairgale.cafe24.com/para/js/imagesloaded.pkgd.min.js"></script>
     <script>
+       function loading(){
+            let $progress = $(".progress"),
+                $progressText = $(".progress-text");
+            let imgLoad = imagesLoaded("body"),
+                imgTotal = imgLoad.images.length,
+                imgLoaded = 0,
+                imgCurrent = 0,
+                progressTimmer = setInterval(updateProgress, 1000/60);
+
+            imgLoad.on("progress", function(){
+                imgLoaded++;
+            });
+
+            function updateProgress(){
+                let target = ( imgLoaded/imgTotal ) * 100;
+                imgCurrent += (target - imgCurrent) * 0.1;
+                $progressText.text( parseInt(imgCurrent) );
+
+                if( imgCurrent >= 100){
+                    clearInterval(progressTimmer);
+
+                    $("body").addClass("active");
+                    //$progress.hide();
+                    gsap.to($progress, {
+                        duration: 2,
+                        top: "-110%",
+                        ease:"power4.out"
+                    });
+
+                    //메인 애니메이션
+                    let tl = gsap.timeline();
+                    tl.to("");
+                }
+
+                if(imgCurrent > 99){
+                    imgCurrent = 100;
+                }            
+            }
+        }
+        loading();
         const tiles = [
-            {
-                image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/ui8-alex-shutin-kKvQJ6rK6S4-unsplash.jpg',
-                thumb: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/ui8-alex-shutin-kKvQJ6rK6S4-unsplash--thumb.jpg',
-                title: 'Summer treads on <br />the heels of spring.',
-                nextTitle: 'Blue <br />Mountains',
-                background: '#a7b5cb'
+            {   
+                // react
+                image: 'https://blog.kakaocdn.net/dn/tY4Qo/btqT3tVLDpw/F4hmq4kejfnxCYRodkNTyK/img.jpg',
+                thumb: 'https://blog.kakaocdn.net/dn/c0LCYZ/btqT6HTRO2Z/RuGqJYua5FtaKyaA6QKhWK/img.jpg',
+                title: `<h2>React_Site</h2><br /><p>리액트를 사용하면 웹 애플리케이션에서 사용하는 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로서, 
+                프로젝트의 유지보수성을 우수하게 해줍니다</p><a>CodeView</a>`,
+                nextTitle: 'Apple_site',
+                background: '#CBBBA8'
             },
             {
-                image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/ui8-marat-gilyadzinov-MYadhrkenNg-unsplash.jpg',
-                thumb: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/ui8-marat-gilyadzinov-MYadhrkenNg-unsplash--thumb.jpg',
-                title: 'Jellyfish make <br />everything better.',
-                nextTitle: 'Squishy <br />Jellies',
-                background: '#B8CBA8'
+                //apple
+                image: 'https://blog.kakaocdn.net/dn/dqJN6H/btqT6He53r6/HSf7FAkXukgK2Oh88kmzU1/img.jpg',
+                thumb: 'https://blog.kakaocdn.net/dn/c0LCYZ/btqT6HTRO2Z/RuGqJYua5FtaKyaA6QKhWK/img.jpg',
+                title: `<h2>Apple_site</h2><br /><p>리액트를 사용하면 웹 애플리케이션에서 사용하는 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로서, 
+                프로젝트의 유지보수성을 우수하게 해줍니다</p><a>CodeView</a>`,
+                nextTitle: 'Megabox_site',
+                background: '#A39B92'
             },
             {
-                image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/ui8-luca-bravo-bTxMLuJOff4-unsplash.jpg',
-                thumb: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/ui8-luca-bravo-bTxMLuJOff4-unsplash--thumb.jpg',
-                title: 'Design adds value <br />faster than it adds costs.',
-                nextTitle: 'Paper <br />Cut',
-                background: '#CABCA7'
+                //megabox
+                image: 'https://blog.kakaocdn.net/dn/bUD67Y/btqT0sXG7Mk/ps5IXkr68EBWwceNaaTMB0/img.jpg',
+                thumb: 'https://blog.kakaocdn.net/dn/c0LCYZ/btqT6HTRO2Z/RuGqJYua5FtaKyaA6QKhWK/img.jpg',
+                title: `<h2>Megabox</h2><br /><p>리액트를 사용하면 웹 애플리케이션에서 사용하는 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로서, 
+                프로젝트의 유지보수성을 우수하게 해줍니다</p><a>CodeView</a>`,
+                nextTitle: 'Clova_site',
+                background: '#A8B4CB'
             },
+            {
+                // clova
+                image: 'https://blog.kakaocdn.net/dn/bUD67Y/btqT0sXG7Mk/ps5IXkr68EBWwceNaaTMB0/img.jpg',
+                thumb: 'https://blog.kakaocdn.net/dn/c0LCYZ/btqT6HTRO2Z/RuGqJYua5FtaKyaA6QKhWK/img.jpg',
+                title: `<h2>Clova_site</h2><br /><p>리액트를 사용하면 웹 애플리케이션에서 사용하는 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로서, 
+                프로젝트의 유지보수성을 우수하게 해줍니다</p><a>CodeView</a>`,
+                nextTitle: 'Responsive',
+                background: '#C29D8F'
+            },
+            {
+                // responsive
+                image: 'https://blog.kakaocdn.net/dn/bKz6Tm/btqT92bJS1v/zsSKuSyvUpbcpEsPkEsu80/img.jpg',
+                thumb: 'https://blog.kakaocdn.net/dn/c0LCYZ/btqT6HTRO2Z/RuGqJYua5FtaKyaA6QKhWK/img.jpg',
+                title: `<h2>Responsive</h2><br /><p>리액트를 사용하면 웹 애플리케이션에서 사용하는 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로서, 
+                프로젝트의 유지보수성을 우수하게 해줍니다</p><a>CodeView</a>`,
+                nextTitle: 'Webstandard',
+                background: '#A8C3CB'
+            },
+            {
+                // webstandard
+                image: 'https://blog.kakaocdn.net/dn/bwOH24/btqT02YBJjN/OYtPhx0TcQVyM7HaFKKRzK/img.jpg',
+                thumb: 'https://blog.kakaocdn.net/dn/c0LCYZ/btqT6HTRO2Z/RuGqJYua5FtaKyaA6QKhWK/img.jpg',
+                title: `<h2>Webstandard</h2><br /><p>리액트를 사용하면 웹 애플리케이션에서 사용하는 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로서, 
+                프로젝트의 유지보수성을 우수하게 해줍니다</p><a>CodeView</a>`,
+                nextTitle: 'Apple_site',
+                background: '#B9CBA8'
+            }
         ];
 
         let activeIndex = 0;
@@ -121,8 +217,8 @@
             const browserWidth = document.body.clientWidth;
             const browserHeight = document.body.clientHeight;
             const browserRatio = browserWidth/browserHeight;
-            const imageWidth = 3000; 
-            const imageHeight = 2000;
+            const imageWidth = 873; 
+            const imageHeight = 485;
             const imageRatio = imageWidth/imageHeight;
             const tileImages = document.querySelectorAll('.tile__img');
 
@@ -229,6 +325,7 @@
                 nextButtonAnimation.play();
             }
         }
+        
 
         titleAnimation.progress(1).progress(0);
         nextButtonAnimation.progress(1).progress(0);
